@@ -7,29 +7,56 @@
 </head>
 <body>
 	<header>
-		<a href="#"><img class="logo-img" width="163" height="35" src="img/logo-device.svg" alt="logo"></a>
+		<a href="#">
+			<img class="logo-img" width="163" height="35" src="img/logo-device.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device">
+		</a>
 		<nav class="navigation-head-top">
 			<ul>
-				<li><input class="search-input" type="text" name="search" placeholder="Поиск по сайту"></li>
-				<li><a class="authorization-button" href="">Войти</a></li>
-				<li><a class="compare-button" href="#">Сравнить</a></li>
-				<li><a class="basket-button" href="#">Корзина</a></li>
+				<li>
+					<form class="form-search" action="" method="get">
+						<input class="search-input" type="text" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" autocomplete="on">
+						<input type="submit" value="Найти">
+					</form>
+				</li>
+				<li>
+					<a type="button" class="authorization-button" href="/login.html">Войти</a>
+				</li>
+				<li>
+					<a type="button" class="compare-button" href="#">Сравнить</a>
+				</li>
+				<li>
+					<a type="button" class="basket-button" href="#">Корзина</a>
+				</li>
 			</ul>
 		</nav>
 		<nav class="navigation-head-bottom">
 			<ul>
-				<li><a class="catalog-button" href="catalog.html"><b>Каталог товаров</b></a></li>
+				<li><button class="catalog-button" aria-pressed="false"><b>Каталог товаров</b></button></li>
 				<li><a class="delivery-button" href="#"><b>Доставка</b></a></li>
 				<li><a class="warranty-button" href="#"><b>Гарантия</b></a></li>
 				<li><a class="contacts-button" href="#"><b>Контакты</b></a></li>
 			</ul>
+			<div class="navigation-catalog-hidden" aria-label="Полный каталог товаров">
+				<ul>
+					<li><a href="catalog.html">Виртуальная реальность</a></li>
+					<li><a href="catalog.html">Моноподы для селфи</a></li>
+					<li><a href="catalog.html">Экшн-камеры</a></li>
+				</ul>
+				<ul>
+					<li><a href="catalog.html">Фитнеc-браслеты</a></li>
+					<li><a href="catalog.html">Умные часы</a></li>
+				</ul>
+				<ul>
+					<li><a href="catalog.html">Квадрокоптеры</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>
-	<main>
-		<h1>HTML Academy: Девайс</h1>
-		<section class="section-showcase">
+	<main aria-labelledby="site-body">
+		<h1 id="site-body" class="visually-hidden">HTML Academy: Девайс</h1>
+		<section class="section-showcase" aria-label="Витрина страницы">
 			<div class="slider" id="slider-showcase-1">
-				<img class="slider-img" width="384" height="486" src="img/slider/slider-stic.png" alt="Изображение селфи палки">
+				<img class="slider-img" width="384" height="486" src="img/slider/slider-stic.png" alt="Изображение черной селфи палки с прорезиненной ручкой, пряжкой для руки и тремя фиксаторами для устройства.">
 				<div class="slider-description">
 					<span class="white-line"></span>
 					<mark>01</mark>
@@ -44,7 +71,7 @@
 				</div>
 			</div>
 			<div class="slider" id="slider-showcase-2">
-				<img class="slider-img" width="345" height="485" src="img/slider/slider-watсh.png" alt="Изображение селфи палки">
+				<img class="slider-img" width="345" height="485" src="img/slider/slider-watсh.png" alt="Изображение Фитнес-браслета с монохромным ЖК-экраном и резиновым браслетом.">
 				<div class="slider-description">
 					<span class="white-line"></span>
 					<mark>02</mark>
@@ -57,7 +84,7 @@
 				</div>
 			</div>
 			<div class="slider" id="slider-showcase-3">
-				<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение селфи палки">
+				<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение квадрокоптера с черными пропеллерами, белым корпусом и снизу камера со стабилизацией.">
 				<div class="slider-description">
 					<span class="white-line"></span>
 					<mark>03</mark>
@@ -76,7 +103,7 @@
 				<li><a class="control-button" href="#slider-showcase-3"></a></li>
 			</ul>
 		</section>
-		<article class="popular">
+		<article class="popular" aria-label="Раздел популярные категории товаров">
 			<ul>
 				<li>
 					<a href="#">
@@ -116,7 +143,7 @@
 				</li>
 			</ul>
 		</article>
-		<section class="section-service">
+		<section class="section-service" aria-label="Раздел услуг">
 			<ul class="slider-control-service">
 				<li><a href="#slider-service-1">Доставка</a></li>
 				<li><a href="#slider-service-2">Гарантия</a></li>
@@ -138,12 +165,12 @@
 				<div class="slider-icon-credit"></div>
 			</div>
 		</section>
-		<section class="section-partners">
+		<section class="section-partners" aria-label="Раздел партнеров">
 			<ul>
-				<li><img src="img/partners/dji_color.png"></li>
-				<li><img src="img/partners/sp_color.png"></li>
-				<li><img src="img/partners/gopro_color.png"></li>
-				<li><img src="img/partners/vive_color.png"></li>
+				<li><img width="260" height="100" src="img/partners/dji_color.png" alt="Лого бренда DJI"></li>
+				<li><img width="260" height="100" src="img/partners/sp_color.png" alt="Лого бренда SP Gadgets"></li>
+				<li><img width="260" height="100" src="img/partners/gopro_color.png" alt="Лого бренда GoPro"></li>
+				<li><img width="260" height="100" src="img/partners/vive_color.png" alt="Лого бренда Vive"></li>
 			</ul>
 		</section>
 		<section class="section-about">
@@ -161,14 +188,14 @@
 			<h2>Контакты</h2>
 			<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 			<p class="map">
-				<img width="560" height="222" src="img/map.jpg" alt="Карта">	
+				<img width="560" height="222" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">	
 			</p>
 			<a class="write-button" href="#"></a>
 		</section>
 	</main>
-	<footer>
+	<footer aria-label="Подвал сайта, основная информация и контакты">
 		<div>
-			<a href="#"><img width="163" height="35" src="img/logo-device-yellow.svg" alt="logo"></a>
+			<a href="#"><img width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
 			<ul>
 				<li><a class="authorization-button" href="">Войти</a></li>
 				<li><a class="compare-button" href="#">Сравнить</a></li>
@@ -178,21 +205,40 @@
 		<div>
 			<p>г. Москва, ул. Строителей, 15</p>
 			<ul>
-				<li><a class="delivery-button" href="#">Доставка</a></li>
-				<li><a class="warranty-button" href="#">Гарантия</a></li>
-				<li><a class="contacts-button" href="#">Контакты</a></li>
+				<li><a type="button" class="authorization-button" href="/login.html">Доставка</a></li>
+				<li><a type="button" class="warranty-button" href="#">Гарантия</a></li>
+				<li><a type="button" class="contacts-button" href="#">Контакты</a></li>
 			</ul> 
 			<p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p> 
 		</div>
 		<div>
 			<span class="yellow-line"></span>
 			<ul>
-				<li><a href="#"><img width="32" height="32" src="img/social/facebook.svg" alt="facebook"></a></li>
-				<li><a href="#"><img width="32" height="32" src="img/social/instagram.svg" alt="instagram"></a></li>
-				<li><a href="#"><img width="32" height="32" src="img/social/twitter.svg" alt="twitter"></a></li>
+				<li><a href="#"><img width="32" height="32" src="img/social/facebook.svg" alt="Лого facebook"></a></li>
+				<li><a href="#"><img width="32" height="32" src="img/social/instagram.svg" alt="Лого instagram"></a></li>
+				<li><a href="#"><img width="32" height="32" src="img/social/twitter.svg" alt="Лого twitter"></a></li>
 			</ul>
 			<a href="https://htmlacademy.ru/intensive/htmlcss"><img width="27" height="35" src="img/logo-html.svg" alt="logo-htmlacademy"></a>
 		</div>
 	</footer>
+	<section id="modal-mail" class="modal-mail">
+		<form>
+			<legend>Форма обратной связи</legend>
+			<fieldset>
+			<label for="name-field">Ваше имя:</label>
+			<input id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Ваше имя и фамилия" required>
+			<label for="email-field">Ваш e-mail:</label>
+			<input id="email-field" name="email" type="email" placeholder="email@example.com" aria-label="Ваша почта" required>
+			<label for="massage-field">Текст письма:</label>
+			<textarea id="massage-field" name="massage" rows="6" placeholder="В свободной форме" aria-label="Текст письма в свободной форме" required></textarea>	
+			</fieldset>
+			<input class="btn-action-1" type="submit" name="submit" value="отправить" aria-pressed="false">
+		</form>
+		<button class="exit" type="button" aria-label="Закрыть">X</button>
+	</section>
+	<section id="modal-map" class="modal-map" aria-label="Окно с картой">
+		<img width="960" height="559" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">
+		<button class="exit" type="button" aria-label="Закрыть">X</button>
+	</section>
 </body>
 </html>
