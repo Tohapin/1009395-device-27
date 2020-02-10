@@ -10,7 +10,7 @@
 		<a href="#">
 			<img class="logo-img" width="163" height="35" src="img/logo-device.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device">
 		</a>
-		<nav class="navigation-head-top">
+		<section class="navigation-head-top">
 			<ul>
 				<li>
 					<form class="form-search" action="" method="get">
@@ -19,7 +19,11 @@
 					</form>
 				</li>
 				<li>
-					<a type="button" class="authorization-button" href="/login.html">Войти</a>
+					<div class="authorization">
+						<a type="button" class="authorization-button" href="/login.html">Войти</a>
+						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
+						<a type="button" class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+					</div>
 				</li>
 				<li>
 					<a type="button" class="compare-button" href="#">Сравнить</a>
@@ -28,28 +32,34 @@
 					<a type="button" class="basket-button" href="#">Корзина</a>
 				</li>
 			</ul>
-		</nav>
+		</section>
 		<nav class="navigation-head-bottom">
 			<ul>
-				<li><button class="catalog-button" aria-pressed="false"><b>Каталог товаров</b></button></li>
-				<li><a class="delivery-button" href="#"><b>Доставка</b></a></li>
-				<li><a class="warranty-button" href="#"><b>Гарантия</b></a></li>
-				<li><a class="contacts-button" href="#"><b>Контакты</b></a></li>
+				<li>
+					<button class="catalog-button" aria-pressed="false">Каталог товаров</button>
+					<ul class="navigation-catalog-hidden" aria-label="Полный каталог товаров">
+						<li>
+							<ul>
+								<li><a href="catalog.html">Виртуальная реальность</a></li>
+								<li><a href="catalog.html">Моноподы для селфи</a></li>
+								<li><a href="catalog.html">Экшн-камеры</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="catalog.html">Фитнеc-браслеты</a></li>
+								<li><a href="catalog.html">Умные часы</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="catalog.html">Квадрокоптеры</a>
+						</li>
+					</ul>
+				</li>
+				<li><a class="delivery-button" href="#">Доставка</a></li>
+				<li><a class="warranty-button" href="#">Гарантия</a></li>
+				<li><a class="contacts-button" href="#">Контакты</a></li>
 			</ul>
-			<div class="navigation-catalog-hidden" aria-label="Полный каталог товаров">
-				<ul>
-					<li><a href="catalog.html">Виртуальная реальность</a></li>
-					<li><a href="catalog.html">Моноподы для селфи</a></li>
-					<li><a href="catalog.html">Экшн-камеры</a></li>
-				</ul>
-				<ul>
-					<li><a href="catalog.html">Фитнеc-браслеты</a></li>
-					<li><a href="catalog.html">Умные часы</a></li>
-				</ul>
-				<ul>
-					<li><a href="catalog.html">Квадрокоптеры</a></li>
-				</ul>
-			</div>
 		</nav>
 	</header>
 	<main aria-labelledby="site-body">
@@ -58,7 +68,6 @@
 			<div class="slider" id="slider-showcase-1">
 				<img class="slider-img" width="384" height="486" src="img/slider/slider-stic.png" alt="Изображение черной селфи палки с прорезиненной ручкой, пряжкой для руки и тремя фиксаторами для устройства.">
 				<div class="slider-description">
-					<span class="white-line"></span>
 					<mark>01</mark>
 					<h2>Делай селфи, как Бен Стиллер!</h2>
 					<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
@@ -73,7 +82,6 @@
 			<div class="slider" id="slider-showcase-2">
 				<img class="slider-img" width="345" height="485" src="img/slider/slider-watсh.png" alt="Изображение Фитнес-браслета с монохромным ЖК-экраном и резиновым браслетом.">
 				<div class="slider-description">
-					<span class="white-line"></span>
 					<mark>02</mark>
 					<h2>Худеем правильно!</h2>
 					<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -86,7 +94,6 @@
 			<div class="slider" id="slider-showcase-3">
 				<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение квадрокоптера с черными пропеллерами, белым корпусом и снизу камера со стабилизацией.">
 				<div class="slider-description">
-					<span class="white-line"></span>
 					<mark>03</mark>
 					<h2>Порхает как бабочка, жалит как пчела!</h2>
 					<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -106,38 +113,32 @@
 		<article class="popular" aria-label="Раздел популярные категории товаров">
 			<ul>
 				<li>
-					<a href="#">
-						<div class="popular-vr"></div>
+					<a href="#">					
 						<p>Виртуальная реальность</p>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<div class="popular-monopods"></div>
 						<p>Моноподы для селфи</p>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<div class="popular-camera"></div>
 						<p>Экшн-камеры</p>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<div class="popular-bracelets"></div>
 						<p>Фитнес-браслеты</p>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<div class="popular-watch"></div>
 						<p>Умные часы</p>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<div class="popular-quadcopters"></div>
 						<p>Квадрокоптеры</p>
 					</a>
 				</li>
@@ -149,28 +150,28 @@
 				<li><a href="#slider-service-2">Гарантия</a></li>
 				<li><a href="#slider-service-3">Кредит</a></li>
 			</ul>
-			<div class="slider-service" id="slider-service-1">
-				<h3>Доставка</h3>
-				<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-				<div class="slider-icon-delivery"></div>
-			</div>
-			<div class="slider-service" id="slider-service-2">
-				<h3>Гарантия</h3>
-				<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-				<div class="slider-icon-warranty"></div>
-			</div>
-			<div class="slider-service" id="slider-service-3">
-				<h3>Кредит</h3>
-				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-				<div class="slider-icon-credit"></div>
+			<div class="slider-service">
+				<div id="slider-service-1">
+					<h3>Доставка</h3>
+					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+				</div>
+				<div id="slider-service-2">
+					<h3>Гарантия</h3>
+					<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+				</div>
+				<div id="slider-service-3">
+					<h3>Кредит</h3>
+					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+				</div>
 			</div>
 		</section>
 		<section class="section-partners" aria-label="Раздел партнеров">
+			<!-- ссылки -->
 			<ul>
-				<li><img width="260" height="100" src="img/partners/dji_color.png" alt="Лого бренда DJI"></li>
-				<li><img width="260" height="100" src="img/partners/sp_color.png" alt="Лого бренда SP Gadgets"></li>
-				<li><img width="260" height="100" src="img/partners/gopro_color.png" alt="Лого бренда GoPro"></li>
-				<li><img width="260" height="100" src="img/partners/vive_color.png" alt="Лого бренда Vive"></li>
+				<li><a href="#"><img width="260" height="100" src="img/partners/dji_color.png" alt="Лого бренда DJI"></a></li>
+				<li><a href="#"><img width="260" height="100" src="img/partners/sp_color.png" alt="Лого бренда SP Gadgets"></a></li>
+				<li><a href="#"><img width="260" height="100" src="img/partners/gopro_color.png" alt="Лого бренда GoPro"></a></li>
+				<li><a href="#"><img width="260" height="100" src="img/partners/vive_color.png" alt="Лого бренда Vive"></a></li>
 			</ul>
 		</section>
 		<section class="section-about">
@@ -197,7 +198,13 @@
 		<div>
 			<a href="#"><img width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
 			<ul>
-				<li><a class="authorization-button" href="">Войти</a></li>
+				<li>
+					<div class="authorization">
+						<a type="button" class="authorization-button" href="/login.html">Войти</a>
+						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
+						<a type="button" class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+					</div>
+				</li>
 				<li><a class="compare-button" href="#">Сравнить</a></li>
 				<li><a class="basket-button" href="#">Корзина</a></li>
 			</ul>  
@@ -212,11 +219,10 @@
 			<p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p> 
 		</div>
 		<div>
-			<span class="yellow-line"></span>
-			<ul>
-				<li><a href="#"><img width="32" height="32" src="img/social/facebook.svg" alt="Лого facebook"></a></li>
-				<li><a href="#"><img width="32" height="32" src="img/social/instagram.svg" alt="Лого instagram"></a></li>
-				<li><a href="#"><img width="32" height="32" src="img/social/twitter.svg" alt="Лого twitter"></a></li>
+			<ul class="link">
+				<li><a class="facebook" href="#">Facebook</a></li> <!-- img/social/facebook.svg -->
+				<li><a class="instagram" href="#">Instagram</a></li> <!-- img/social/instagram.svg -->
+				<li><a class="twitter" href="#">Twitter</a></li> <!-- img/social/twitter.svg -->
 			</ul>
 			<a href="https://htmlacademy.ru/intensive/htmlcss"><img width="27" height="35" src="img/logo-html.svg" alt="logo-htmlacademy"></a>
 		</div>
@@ -232,7 +238,7 @@
 			<label for="massage-field">Текст письма:</label>
 			<textarea id="massage-field" name="massage" rows="6" placeholder="В свободной форме" aria-label="Текст письма в свободной форме" required></textarea>	
 			</fieldset>
-			<input class="btn-action-1" type="submit" name="submit" value="отправить" aria-pressed="false">
+			<input class="btn-action-yellow" type="submit" name="submit" value="отправить" aria-pressed="false">
 		</form>
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
 	</section>
