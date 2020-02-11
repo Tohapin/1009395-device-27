@@ -1,0 +1,390 @@
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url(fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url(fonts/Gilroy-Light.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', Circe, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  font-weight: 300;
+  color: #464646;
+
+  background-color: #ffffff;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.visually-hidden{
+	display: none;
+}
+
+/*стили в хедере*/
+.navigation-head-top{
+	background-color: rgba(240, 197, 46, 0.5); 
+}
+
+.logo-img:hover,
+.logo-img:focus{
+	opacity: 0.6;
+}
+
+.logo-img:active{
+	opacity: 0.3;
+}
+
+/*доделать инпут*/
+.search-input{
+ 	color: rgba(0, 0, 0, 0.3);
+}
+
+.form-search::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/search.svg");
+   	height: 16px;
+   	width: 16px;
+   	padding-right: 20px;
+}
+
+.authorization > a{
+	color: #000000; 
+}
+
+.authorization-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/user.svg");
+   	height: 13px;
+   	width: 12px;
+   	padding-right: 14px;
+}		
+
+.authorization-button:hover:before,
+.authorization-button:focus:before{
+	opacity: 0.6;
+}
+
+.authorization-button:active:before{
+	opacity: 0.3;
+}		
+
+.authorization:hover a,
+.authorization:focus a{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.authorization:active a{
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-head-top > ul > li > a{
+	color: #000000;
+}
+
+.compare-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/compare.svg");
+   	height: 10px;
+   	width: 10px;
+   	padding-right: 10px;
+}
+
+.compare-button:hover:before,
+.compare-button:focus:before{
+	opacity: 0.6;
+}
+
+.compare-button:active:before{
+	opacity: 0.3;
+}		
+
+.compare-button:hover,
+.compare-button:focus{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.compare-button:active{
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.basket-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/cart.svg");
+   	height: 12px;
+   	width: 12px;
+   	padding-right: 12px;
+}
+
+.navigation-head-bottom{
+	background-color: rgba(240, 197, 46, 0.5); 
+}
+
+.catalog-button{
+	font-family: "Gilroy", sans-serif;
+	letter-spacing: 3.6px;
+	font-size: 18px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #000000;
+	background-color: transparent;
+  	border: none;
+  	padding: 0;
+}
+
+.catalog-button:hover,
+.catalog-button:focus{
+	opacity: 0.6;
+}
+
+.catalog-button:active{
+	opacity: 0.3;
+}
+
+.catalog-button:after{
+	display: inline;
+	content: url("../img/icon/plus.svg");
+	opacity: 0.3;
+   	height: 16px;
+   	width: 16px;
+   	padding-left: 12px;
+   	vertical-align: middle;
+}
+
+.navigation-head-bottom > ul > li > a{
+	font-family: "Gilroy", sans-serif;
+	letter-spacing: 3.6px;
+	font-size: 18px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #000000;
+	background-color: transparent;
+  	border: none;
+  	padding: 0;
+ 
+}
+
+.navigation-catalog-hidden a{
+	  font-size: 15px;
+	  font-weight: 300;
+	  letter-spacing: 0.15px;
+	  font-stretch: normal;
+	  font-style: normal;
+	  color: #000000;
+}
+
+.navigation-catalog-hidden a:hover,
+.navigation-catalog-hidden a:focus{
+	opacity: 0.6;
+}
+
+.navigation-catalog-hidden a:active{
+	opacity: 0.3;
+}	
+
+.slider-description h2{
+	font-family: "Gilroy", sans-serif;
+	font-size: 47px;
+  	font-weight: 800;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.19;
+  	letter-spacing: 0.47px;
+	color: #000000;
+}
+
+.slider-parameters b{
+	display: block;
+	font-family: "Gilroy-Light", sans-serif;
+  	font-size: 36px;
+  	font-weight: 300;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.33;
+  	letter-spacing: 0.36px;
+}
+
+.slider-parameters small{
+	font-family: "OpenSans", sans-serif;
+	color: #464646;
+  	font-size: 13px;
+  	font-weight: 300;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.54;
+  	letter-spacing: 0.13px;	
+}
+
+.button-more-details{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+  	font-size: 18px;
+  	font-weight: 800;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	background-color: #f0c52e;
+  	padding: 14px 44px;
+  	box-shadow: inset 0 21px 0 0 #ffffff, inset 0 -22px 0 0 #ffffff;
+}
+
+.button-more-details:hover,
+.button-more-details:focus{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+}
+
+.button-more-details:active{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+	color: rgba(0,0,0,0.3);
+}	
+
+.popular-element{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 18px;
+  	font-weight: 800;
+  	letter-spacing: 0.18px;
+  	text-align: left;
+  	color: #000000;
+}
+
+.popular-element span{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 160px;
+	height: 160px;
+	background-color: rgba(240, 197, 46, 0.5);
+}
+
+.vr span:before{
+	content: url("../img/icon/popular-1.svg");
+	width: 97px;
+	height: 55px;
+}
+
+.monopod span:before{
+	content: url("../img/icon/popular-2.svg");
+	width: 86px;
+	height: 117px;
+	align-self: flex-end;
+}
+
+.action-cam span:before{
+	content: url("../img/icon/popular-3.svg");
+	width: 71px;
+	height: 87px;
+}
+
+.fitnes span:before{
+	content: url("../img/icon/popular-4.svg");
+	width: 107px;
+	height: 65px;
+}
+
+.watch span:before{
+	content: url("../img/icon/popular-5.svg");
+	width: 56px;
+	height: 98px;
+}
+
+.quadrocopter span:before{
+	content: url("../img/icon/popular-6.svg");
+	width: 132px;
+	height: 86px;
+}
+
+a.popular-element:hover span{
+	background-color: #f0c52e;
+}
+
+a.popular-element:active{
+	opacity: 0.3;
+}
+
+a.popular-element:active span:before{
+	opacity: 0.3;
+}
+
+.slider-control-service a{
+	display: block;
+	width: 160px;
+	text-align: center;
+	padding: 14px 0;
+	font-family: "Gilroy-ExtraBold", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+  	font-size: 18px;
+  	font-weight: 800;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	background-color: #f0c52e;
+  	box-shadow: inset 0 21px 0 0 #ffffff, inset 0 -22px 0 0 #ffffff;
+}
+
+.slider-control-service a:hover{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+}
+
+.slider-control-service a:active{
+	color: rgba(240, 197, 46, 0.5);
+	background-color: #000000;
+	box-shadow: 118px 0px 0 0 #000000;
+}
+
+.slider-service h3{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+  	font-size: 47px;
+  	font-weight: 800;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.02;
+  	letter-spacing: 0.47px;
+}
+
+#slider-service-1:after{
+	/*position: absolute;*/
+	content: url("../img/icon/delivery.svg")
+}
+
+#slider-service-2:after{
+	/*position: absolute;*/
+	content: url("../img/icon/warranty.svg")
+}
+
+#slider-service-3:after{
+	/*position: absolute;*/
+	content: url("../img/icon/credit.svg")
+}
+
+.section-partners img{
+	background: url("../img/partners/dji.png") no-repeat center center;
+}

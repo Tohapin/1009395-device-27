@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,7 +23,7 @@
 				<li>
 					<div class="authorization">
 						<a type="button" class="authorization-button" href="/login.html">Войти</a>
-						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
+						<a type="button" class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
 						<a type="button" class="authorization-button visually-hidden" href="/login.html">Выйти</a>
 					</div>
 				</li>
@@ -68,10 +70,9 @@
 			<div class="slider" id="slider-showcase-1">
 				<img class="slider-img" width="384" height="486" src="img/slider/slider-stic.png" alt="Изображение черной селфи палки с прорезиненной ручкой, пряжкой для руки и тремя фиксаторами для устройства.">
 				<div class="slider-description">
-					<mark>01</mark>
 					<h2>Делай селфи, как Бен Стиллер!</h2>
 					<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-					<a class="button-more-details" href="">подробнее</a>
+					<a class="button-more-details" href="#">подробнее</a>
 					<ul class="slider-parameters">
 						<li><b>8,5 м</b><small>Длина палки</small></li>
 						<li><b>5 кг</b><small>Вес палки</small></li>
@@ -82,10 +83,9 @@
 			<div class="slider" id="slider-showcase-2">
 				<img class="slider-img" width="345" height="485" src="img/slider/slider-watсh.png" alt="Изображение Фитнес-браслета с монохромным ЖК-экраном и резиновым браслетом.">
 				<div class="slider-description">
-					<mark>02</mark>
 					<h2>Худеем правильно!</h2>
 					<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-					<a class="button-more-details" href="">подробнее</a>
+					<a class="button-more-details" href="#">подробнее</a>
 					<ul class="slider-parameters">
 						<li><b>48 часов</b><small>без подзарядки</small></li>
 					</ul>
@@ -94,10 +94,9 @@
 			<div class="slider" id="slider-showcase-3">
 				<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение квадрокоптера с черными пропеллерами, белым корпусом и снизу камера со стабилизацией.">
 				<div class="slider-description">
-					<mark>03</mark>
 					<h2>Порхает как бабочка, жалит как пчела!</h2>
 					<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-					<a class="button-more-details" href="">подробнее</a>
+					<a class="button-more-details" href="#">подробнее</a>
 					<ul class="slider-parameters">
 						<li><b>800 м</b><small>Дальность полета</small></li>
 						<li><b>50 м</b><small>Радиус поражения</small></li>
@@ -113,40 +112,46 @@
 		<article class="popular" aria-label="Раздел популярные категории товаров">
 			<ul>
 				<li>
-					<a href="#">					
-						<p>Виртуальная реальность</p>
+					<a class="popular-element vr" href="#">
+						<span></span>					
+						Виртуальная реальность
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<p>Моноподы для селфи</p>
+					<a class="popular-element monopod" href="#">
+						<span></span>	
+						Моноподы для селфи
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<p>Экшн-камеры</p>
+					<a class="popular-element action-cam" href="#">
+						<span></span>
+						Экшн-камеры
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<p>Фитнес-браслеты</p>
+					<a class="popular-element fitnes" href="#">
+						<span></span>
+						Фитнес-браслеты
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<p>Умные часы</p>
+					<a class="popular-element watch" href="#">
+						<span></span>
+						Умные часы
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<p>Квадрокоптеры</p>
+					<a class="popular-element quadrocopter" href="#">
+						<span></span>
+						Квадрокоптеры
 					</a>
 				</li>
 			</ul>
 		</article>
 		<section class="section-service" aria-label="Раздел услуг">
 			<ul class="slider-control-service">
-				<li><a href="#slider-service-1">Доставка</a></li>
+				<li><a href="#">Доставка</a></li>
 				<li><a href="#slider-service-2">Гарантия</a></li>
 				<li><a href="#slider-service-3">Кредит</a></li>
 			</ul>
