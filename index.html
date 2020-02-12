@@ -16,8 +16,8 @@
 			<ul>
 				<li>
 					<form class="form-search" action="" method="get">
-						<input class="search-input" type="text" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" autocomplete="on">
-						<input type="submit" value="Найти">
+						<input class="search-text" type="text" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" autocomplete="on">
+						<input class="search-submit" type="submit" value="Найти">
 					</form>
 				</li>
 				<li>
@@ -235,22 +235,22 @@
 		</div>
 	</footer>
 	<section id="modal-mail" class="modal-mail">
-		<form>
+		<form action="" method="post">
 			<legend>Форма обратной связи</legend>
-			<fieldset>
-			<label for="name-field">Ваше имя:</label>
-			<input id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Ваше имя и фамилия" required>
-			<label for="email-field">Ваш e-mail:</label>
-			<input id="email-field" name="email" type="email" placeholder="email@example.com" aria-label="Ваша почта" required>
-			<label for="massage-field">Текст письма:</label>
-			<textarea id="massage-field" name="massage" rows="6" placeholder="В свободной форме" aria-label="Текст письма в свободной форме" required></textarea>	
+			<fieldset class="data-mail">
+				<label class="modal-mail-name-label" for="name-field">Ваше имя:</label>
+				<input class="modal-mail-name-input" id="name-field" type="text" name="name" placeholder="Имя Фамилия" aria-label="Ваше имя и фамилия" required>
+				<label for="email-field">Ваш e-mail:</label>
+				<input id="email-field" name="email" type="email" placeholder="email@example.com" aria-label="Ваша почта" required>
+				<label for="massage-field">Текст письма:</label>
+				<textarea id="massage-field" name="massage" rows="6" placeholder="В свободной форме" aria-label="Текст письма в свободной форме" required></textarea>	
 			</fieldset>
 			<input class="btn-action-yellow" type="submit" name="submit" value="отправить" aria-pressed="false">
 		</form>
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
 	</section>
 	<section id="modal-map" class="modal-map" aria-label="Окно с картой">
-		<img width="960" height="559" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">
+		<img width="960" height="559" src="img/map-modal.jpg" alt="Карта с адресом улица Строителей, 15">
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
 	</section>
 </body>
