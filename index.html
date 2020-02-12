@@ -183,7 +183,7 @@
 			<h2>О нас</h2>
 			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-			<ul>
+			<ul class="about-list">
 				<li>Деловые Линии</li>
 				<li>Автотрейдинг</li>
 				<li>ЖелДорЭкспедиция</li>
@@ -196,15 +196,15 @@
 			<p class="map">
 				<img width="560" height="222" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">	
 			</p>
-			<a class="write-button" href="#"></a>
+			<a class="write-button" href="#">НАпишите нам</a>
 		</section>
 	</main>
 	<footer aria-label="Подвал сайта, основная информация и контакты">
-		<div>
-			<a href="#"><img width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
-			<ul>
+		<div class="rows-menu">
+			<a href="#"><img class="logo-img" width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
+			<ul class="authorization-footer">
 				<li>
-					<div class="authorization">
+					<div >
 						<a type="button" class="authorization-button" href="/login.html">Войти</a>
 						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
 						<a type="button" class="authorization-button visually-hidden" href="/login.html">Выйти</a>
@@ -214,22 +214,24 @@
 				<li><a class="basket-button" href="#">Корзина</a></li>
 			</ul>  
 		</div>
-		<div>
+		<div class="rows-contacts">
 			<p>г. Москва, ул. Строителей, 15</p>
 			<ul>
-				<li><a type="button" class="authorization-button" href="/login.html">Доставка</a></li>
+				<li><a type="button" class="delivery-button" href="/login.html">Доставка</a></li>
 				<li><a type="button" class="warranty-button" href="#">Гарантия</a></li>
 				<li><a type="button" class="contacts-button" href="#">Контакты</a></li>
 			</ul> 
 			<p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p> 
 		</div>
-		<div>
+		<div class="rows-links">
 			<ul class="link">
 				<li><a class="facebook" href="#">Facebook</a></li> <!-- img/social/facebook.svg -->
 				<li><a class="instagram" href="#">Instagram</a></li> <!-- img/social/instagram.svg -->
 				<li><a class="twitter" href="#">Twitter</a></li> <!-- img/social/twitter.svg -->
 			</ul>
-			<a href="https://htmlacademy.ru/intensive/htmlcss"><img width="27" height="35" src="img/logo-html.svg" alt="logo-htmlacademy"></a>
+			<a href="https://htmlacademy.ru/intensive/htmlcss">
+				<img class="logo-htmlacademy" width="27" height="35" src="img/logo-html.svg" alt="logo-htmlacademy">
+			</a>
 		</div>
 	</footer>
 	<section id="modal-mail" class="modal-mail">

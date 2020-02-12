@@ -29,7 +29,11 @@ a{
 
 ul{
 	list-style: none;
-	padding-inline-start: 0;
+	padding-left: 0px;
+}
+
+footer{
+	background-color: #464646;
 }
 
 .visually-hidden{
@@ -97,11 +101,11 @@ ul{
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.navigation-head-top > ul > li > a{
+.navigation-head-top a{
 	color: #000000;
 }
 
-.compare-button::before{
+header .compare-button::before{
 	display: inline;
 	/*почему вариант ниже не сработал?*/
    	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
@@ -111,25 +115,25 @@ ul{
    	padding-right: 10px;
 }
 
-.compare-button:hover:before,
-.compare-button:focus:before{
+header .compare-button:hover:before,
+header .compare-button:focus:before{
 	opacity: 0.6;
 }
 
-.compare-button:active:before{
+header .compare-button:active:before{
 	opacity: 0.3;
 }		
 
-.compare-button:hover,
-.compare-button:focus{
+header .compare-button:hover,
+header .compare-button:focus{
     color: rgba(0, 0, 0, 0.6);
 }
 
-.compare-button:active{
+header .compare-button:active{
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.basket-button::before{
+header .basket-button::before{
 	display: inline;
 	/*почему вариант ниже не сработал?*/
    	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
@@ -206,7 +210,7 @@ ul{
 }	
 
 .slider-description h2{
-	font-family: "Gilroy", sans-serif;
+	font-family: "Gilroy-ExtraBold", sans-serif;
 	font-size: 47px;
   	font-weight: 800;
   	font-stretch: normal;
@@ -386,5 +390,390 @@ a.popular-element:active span:before{
 }
 
 .section-partners img{
-	background: url("../img/partners/dji.png") no-repeat center center;
+	display: none;
 }
+
+.section-partners li:nth-child(1) a:before{
+	content: url("../img/partners/dji.png");
+	width: 260px;
+	height: 100px;
+}
+
+.section-partners li:nth-child(2) a:before{
+	content: url("../img/partners/sp.png");
+	width: 260px;
+	height: 100px;
+}
+
+.section-partners li:nth-child(3) a:before{
+	content: url("../img/partners/gopro.png");
+	width: 260px;
+	height: 100px;
+}
+
+.section-partners li:nth-child(4) a:before{
+	content: url("../img/partners/vive.png");
+	width: 260px;
+	height: 100px;
+}
+
+.section-partners a:hover img{
+	display: inline;
+}
+
+.section-partners a:hover:before{
+	display: none;
+}
+
+.section-about h2{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 47px;
+  	font-weight: 800;
+  	line-height: 1.02;
+  	letter-spacing: 0.47px;
+ 	color: #000000;
+}
+
+ul.about-list{
+	padding-left: 20px;
+	list-style-position:outside;
+	list-style-image: url("../img/icon/slider-button-about.svg");
+	text-indent: 25px;
+}
+
+.about-list li{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 16px;
+  	font-weight: 800;
+  	line-height: 1.02;
+  	letter-spacing: 0.47px;
+ 	color: #000000;
+ 		line-height: 30px;
+}
+
+.section-contacts h2{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 47px;
+  	font-weight: 800;
+  	line-height: 1.02;
+  	letter-spacing: 0.47px;
+ 	color: #000000;
+}
+
+.about-button{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+  	font-size: 18px;
+  	font-weight: 800;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	background-color: #f0c52e;
+  	padding: 14px 22px;
+  	box-shadow: inset 0 21px 0 0 #ffffff, inset 0 -22px 0 0 #ffffff;
+}
+
+.about-button:hover,
+.about-button:focus{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+}
+
+.about-button:active{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+	color: rgba(0,0,0,0.3);
+}
+
+.write-button{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+  	font-size: 18px;
+  	font-weight: 800;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	background-color: #f0c52e;
+  	padding: 14px 40px;
+  	box-shadow: inset 0 21px 0 0 #ffffff, inset 0 -22px 0 0 #ffffff;
+}
+
+.write-button:hover,
+.write-button:focus{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+}
+
+.write-button:active{
+	box-shadow: inset 0 0 0 0 #ffffff,inset 0 0 0 0 #ffffff;
+	color: rgba(0,0,0,0.3);
+}
+
+.authorization-footer a{
+	opacity: 0.7;
+  	font-size: 15px;
+  	font-weight: 300;
+  	line-height: 2.4;
+  	letter-spacing: 0.15px;
+  	color: rgba(255, 255, 255, 0.7);
+}
+
+footer .compare-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/compare-yellow.svg");
+   	height: 10px;
+   	width: 10px;
+   	padding-right: 10px;
+}
+
+footer .authorization-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/user-yellow.svg");
+   	height: 10px;
+   	width: 10px;
+   	padding-right: 10px;
+}
+
+footer .basket-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/search-yellow.svg");
+   	height: 10px;
+   	width: 10px;
+   	padding-right: 10px;
+}
+
+footer .compare-button:hover:before,
+footer .compare-button:focus:before{
+	opacity: 0.6;
+}
+
+footer .compare-button:active:before{
+	opacity: 0.3;
+}		
+
+footer .compare-button:hover,
+footer .compare-button:focus{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+footer .compare-button:active{
+	color: rgba(0, 0, 0, 0.3);
+}
+
+footer .basket-button::before{
+	display: inline;
+	/*почему вариант ниже не сработал?*/
+   	/*content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0 0 14 7a7 7 0 1 0-7 7 6.963 6.963 0 0 0 4.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 0 0 1-1 .93.93 0 0 0-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/></svg>");*/
+   	content: url("../img/icon/cart.svg");
+   	height: 12px;
+   	width: 12px;
+   	padding-right: 12px;
+}
+
+.rows-contacts p{
+	color: #ffffff;
+}
+
+.rows-contacts a{
+	color: #ffffff;
+}
+
+.rows-contacts a:hover{
+	opacity: 0.6;
+}
+
+.rows-contacts a:active{
+	opacity: 0.3;
+}
+
+footer .delivery-button{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 18px;
+  	font-weight: 800;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	color: #ffffff;
+}
+
+footer .warranty-button{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 18px;
+  	font-weight: 800;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	color: #ffffff;
+}
+
+footer .contacts-button{
+	font-family: "Gilroy-ExtraBold", sans-serif;
+  	font-size: 18px;
+  	font-weight: 800;
+  	line-height: 1.33;
+  	letter-spacing: 3.6px;
+  	color: #ffffff;
+}
+
+.facebook{
+	font-size: 0; 
+}
+
+.facebook::before{
+	content: url("../img/social/facebook.svg");
+	opacity: 0.3;
+	width: 100px;
+	height: 100px;
+}
+
+.facebook:hover:before{
+	opacity: 0.6;
+}
+
+.facebook:active:before{
+	opacity: 0.1;
+}
+
+.instagram{
+	font-size: 0; 
+}
+
+.instagram::before{
+	content: url("../img/social/instagram.svg");
+	opacity: 0.3;
+	width: 100px;
+	height: 100px;
+}
+
+.instagram:hover:before{
+	opacity: 0.6;
+}
+
+.instagram:active:before{
+	opacity: 0.1;
+}
+
+.twitter{
+	font-size: 0; 
+}
+
+.twitter::before{
+	content: url("../img/social/twitter.svg");
+	opacity: 0.3;
+	width: 100px;
+	height: 100px;
+}
+
+.twitter:hover:before{
+	opacity: 0.6;
+}
+
+.twitter:active:before{
+	opacity: 0.1;
+}
+
+.twitter::before{
+	content: url("../img/social/twitter.svg");
+	opacity: 0.3;
+	width: 100px;
+	height: 100px;
+}
+
+.twitter:hover:before{
+	opacity: 0.6;
+}
+
+.twitter:active:before{
+	opacity: 0.1;
+}
+
+.logo-htmlacademy:hover{
+	opacity: 0.6;
+}
+
+.logo-htmlacademy:active{
+	opacity: 0.3;
+}
+
+/*дизайн модального окна*/
+
+.modal-mail{
+	/*position: absolute;*/
+	width: 960px;
+	height: 553px;
+	box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-mail legend{
+	display: none;
+}
+
+.modal-mail label{
+	display: block;
+	font-family: "Gilroy-ExtraBold";
+  	font-size: 18px;
+  	font-weight: 800;
+  	line-height: 1.33;
+  	letter-spacing: normal;
+  	color: #000000;	
+}
+
+.modal-mail input{
+	width: 360px;
+	font-size: 14px;
+	color: #464646;
+	padding: 20px 20px;
+	line-height: 1.29;
+	border:none;
+	background: #f2f2f2;
+}
+
+.modal-mail input:hover{
+	background-color: #eaeaea;
+}
+
+.modal-mail input:focus,
+.modal-mail input:active{
+  	outline: solid 2px #f0c52e;
+  	background-color: #ffffff;
+  	font-size: 14px;
+  	line-height: 1.29;
+  	color: #464646;
+}
+
+.modal-mail input:placeholder{
+    opacity: 0.4;
+  	font-family: OpenSans;
+  	font-size: 14px;
+  	line-height: 1.29;
+  	letter-spacing: normal;
+  	color: rgba(70, 70, 70, 0.4);
+}
+
+/* 
+label {
+    position: absolute;
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+ 
+input:placeholder-shown + label {
+    opacity: 0.4;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(70, 70, 70, 0.4);
+}*/
