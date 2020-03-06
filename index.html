@@ -8,49 +8,50 @@
 </head>
 <body>
 	<header class="main-header container">
-		<div class="layout-header-logo container">
+		<div class="layout-header-logo">
 			<a href="#">
 				<img class="logo-img" width="163" height="35" src="img/logo-device.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device">
 			</a>
 		</div>
 		<div class="main-header-border">
-			<section class="layout-navigation-head-top container">
+			<div class="layout-navigation-head-top">
 				<ul class="navigation-head-top">
 					<li>
-						<form class="form-search" action="" method="get">
-							<input class="search-text" type="text" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" autocomplete="on">
+						<form class="form-search" action="#" method="get">
+							<label class="magnifier" for="search-text"></label>
+							<input id="search-text" class="search-text" type="text" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" autocomplete="on">
 							<input class="search-submit" type="submit" value="Найти">
 						</form>
 					</li>
 					<li>
 						<div class="authorization">
-							<a type="button" class="authorization-button" href="/login.html">Войти</a>
-							<a type="button" class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
-							<a type="button" class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+							<a class="authorization-button" href="/login.html">Войти</a>
+							<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
+							<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
 						</div>
 					</li>
 					<li>
-						<a type="button" class="compare-button" href="#">Сравнить</a>
+						<a class="compare-button" href="#">Сравнить</a>
 					</li>
 					<li>
-						<a type="button" class="basket-button" href="#">Корзина</a>
+						<a class="basket-button" href="#">Корзина</a>
 					</li>
 				</ul>
-			</section>
-			<nav class="layout-navigation-head-bottom container">
+			</div>
+			<nav class="layout-navigation-head-bottom">
 				<ul class="navigation-head-bottom">
 					<li>
 						<button class="catalog-button" aria-pressed="false">Каталог товаров</button>
-						<ul class="navigation-catalog-full navigation-catalog-hidden" aria-label="Полный каталог товаров" style="display: none;">
+						<!-- <ul class="navigation-catalog-full navigation-catalog-hidden container" aria-label="Полный каталог товаров">
 							<li>
-								<ul>
+								<ul class="navigation-catalog-item">
 									<li><a href="catalog.html">Виртуальная реальность</a></li>
 									<li><a href="catalog.html">Моноподы для селфи</a></li>
 									<li><a href="catalog.html">Экшн-камеры</a></li>
 								</ul>
 							</li>
 							<li>
-								<ul>
+								<ul class="navigation-catalog-item">
 									<li><a href="catalog.html">Фитнеc-браслеты</a></li>
 									<li><a href="catalog.html">Умные часы</a></li>
 								</ul>
@@ -58,7 +59,7 @@
 							<li>
 								<a href="catalog.html">Квадрокоптеры</a>
 							</li>
-						</ul>
+						</ul> -->
 					</li>
 					<li><a class="delivery-button" href="#">Доставка</a></li>
 					<li><a class="warranty-button" href="#">Гарантия</a></li>
@@ -161,9 +162,9 @@
 		</article>
 		<section class="layout-section-service section-service container" aria-label="Раздел услуг">
 			<ul class="layout-slider-control-service slider-control-service">
-				<li><a href="#">Доставка</a></li>
-				<li><a href="#slider-service-2">Гарантия</a></li>
-				<li><a href="#slider-service-3">Кредит</a></li>
+				<li> <button>Доставка</button></li>
+				<li><button>Гарантия</button></li>
+				<li><button>Кредит</button></li>
 			</ul>
 			<div class="layout-slider-service slider-service">
 				<div class="layout-slider-item" id="slider-service-1">
@@ -217,9 +218,9 @@
 			<ul class="authorization-footer">
 				<li>
 					<div>
-						<a type="button" class="authorization-button" href="/login.html">Войти</a>
+						<a class="authorization-button" href="/login.html">Войти</a>
 						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
-						<a type="button" class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+						<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
 					</div>
 				</li>
 				<li><a class="compare-button" href="#">Сравнить</a></li>
@@ -229,9 +230,9 @@
 		<div class="layout-rows-contacts rows-contacts container">
 			<p>г. Москва, ул. Строителей, 15</p>
 			<ul class="layout-footer-list">
-				<li><a type="button" class="delivery-button" href="/login.html">Доставка</a></li>
-				<li><a type="button" class="warranty-button" href="#">Гарантия</a></li>
-				<li><a type="button" class="contacts-button" href="#">Контакты</a></li>
+				<li><a class="delivery-button" href="/login.html">Доставка</a></li>
+				<li><a class="warranty-button" href="#">Гарантия</a></li>
+				<li><a class="contacts-button" href="#">Контакты</a></li>
 			</ul> 
 			<p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p> 
 		</div>
@@ -241,12 +242,12 @@
 				<li><a class="instagram" href="#">Instagram</a></li> <!-- img/social/instagram.svg -->
 				<li><a class="twitter" href="#">Twitter</a></li> <!-- img/social/twitter.svg -->
 			</ul>
-			<a href="https://htmlacademy.ru/intensive/htmlcss">
+			<a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
 				<img class="logo-htmlacademy" width="27" height="35" src="img/logo-html.svg" alt="logo-htmlacademy">
 			</a>
 		</div>
 	</footer>
-	<section id="modal-mail" class="layout-modal-mail modal-mail">
+	<!-- <section id="modal-mail" class="layout-modal-mail modal-mail">
 		<form action="" method="post">
 			<legend>Форма обратной связи</legend>
 			<div class="layout-data-mail data-mail">
@@ -263,10 +264,13 @@
 			<button class="btn-action-yellow" type="submit" name="submit" aria-pressed="false">отправить</button>
 		</form>
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
-	</section> 
-	<section id="modal-map" class="modal-map" aria-label="Окно с картой">
+	</section>  -->
+	<!-- <section id="modal-map" class="modal-map" aria-label="Окно с картой">
 		<img width="960" height="559" src="img/map-modal.jpg" alt="Карта с адресом улица Строителей, 15">
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
-	</section> 
+	</section>  -->
+	<script>
+		
+	</script>
 </body>
-</html>
+</html>	
