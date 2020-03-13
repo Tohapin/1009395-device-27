@@ -42,7 +42,7 @@
 				<ul class="navigation-head-bottom">
 					<li>
 						<button class="catalog-button" aria-pressed="false">Каталог товаров</button>
-						<!-- <ul class="navigation-catalog-full navigation-catalog-hidden container" aria-label="Полный каталог товаров">
+						<ul class="navigation-catalog-full navigation-catalog-hidden container" aria-label="Полный каталог товаров">
 							<li>
 								<ul class="navigation-catalog-item">
 									<li><a href="catalog.html">Виртуальная реальность</a></li>
@@ -59,7 +59,7 @@
 							<li>
 								<a href="catalog.html">Квадрокоптеры</a>
 							</li>
-						</ul> -->
+						</ul>
 					</li>
 					<li><a class="delivery-button" href="#">Доставка</a></li>
 					<li><a class="warranty-button" href="#">Гарантия</a></li>
@@ -88,25 +88,29 @@
 				</div>
 			</div>
 
-			<!-- <div class="slider" id="slider-showcase-2">
-				<img class="slider-img" width="345" height="485" src="img/slider/slider-watсh.png" alt="Изображение Фитнес-браслета с монохромным ЖК-экраном и резиновым браслетом.">
-				<div class="slider-description">
+			<div class="layout-slider slider" id="slider-showcase-2">
+				<div class="layout-slider-img-box">
+					<img class="slider-img" width="345" height="486" src="img/slider/slider-watсh.png" alt="Изображение Фитнес-браслета с монохромным ЖК-экраном и резиновым браслетом.">
+				</div>
+				<div class="layout-slider-description-box slider-description">
 					<h2>Худеем правильно!</h2>
 					<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 					<a class="button-more-details" href="#">подробнее</a>
-					<ul class="slider-parameters">
+					<ul class="layout-slider-parameters slider-parameters">
 						<li><b>48 часов</b><small>без подзарядки</small></li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="slider" id="slider-showcase-3">
-				<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение квадрокоптера с черными пропеллерами, белым корпусом и снизу камера со стабилизацией.">
-				<div class="slider-description">
+			<div class="layout-slider slider" id="slider-showcase-3">
+				<div class="layout-slider-img-box">
+					<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение квадрокоптера с черными пропеллерами, белым корпусом и снизу камера со стабилизацией.">
+				</div>
+				<div class="layout-slider-description-box slider-description">
 					<h2>Порхает как бабочка, жалит как пчела!</h2>
 					<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 					<a class="button-more-details" href="#">подробнее</a>
-					<ul class="slider-parameters">
+					<ul class="layout-slider-parameters slider-parameters">
 						<li><b>800 м</b><small>Дальность полета</small></li>
 						<li><b>50 м</b><small>Радиус поражения</small></li>
 					</ul>
@@ -114,10 +118,10 @@
 			</div>
 
 			<ul class="slider-control-showcase">
-				<li><a class="control-button" href="#slider-showcase-1"></a></li>
-				<li><a class="control-button" href="#slider-showcase-2"></a></li>
-				<li><a class="control-button" href="#slider-showcase-3"></a></li>
-			</ul> -->
+				<li><a class="control-button active" href="#slider-showcase-1">1</a></li>
+				<li><a class="control-button" href="#slider-showcase-2">2</a></li>
+				<li><a class="control-button" href="#slider-showcase-3">3</a></li>
+			</ul> 
 
 		</section>
 		<article class="layout-popular container" aria-label="Раздел популярные категории товаров">
@@ -129,7 +133,7 @@
 					</a>
 				</li>
 				<li>
-					<a class="popular-element monopod" href="#">
+					<a class="popular-element monopod" href="catalog.html">
 						<span></span>	
 						Моноподы для селфи
 					</a>
@@ -162,7 +166,7 @@
 		</article>
 		<section class="layout-section-service section-service container" aria-label="Раздел услуг">
 			<ul class="layout-slider-control-service slider-control-service">
-				<li> <button>Доставка</button></li>
+				<li><button class="active">Доставка</button></li>
 				<li><button>Гарантия</button></li>
 				<li><button>Кредит</button></li>
 			</ul>
@@ -171,14 +175,14 @@
 					<h3>Доставка</h3>
 					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 				</div>
-				<!-- <div id="slider-service-2">
+				<div class="layout-slider-item" id="slider-service-2">
 					<h3>Гарантия</h3>
 					<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
 				</div>
-				<div id="slider-service-3">
+				<div class="layout-slider-item" id="slider-service-3">
 					<h3>Кредит</h3>
 					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-				</div> -->
+				</div>
 			</div>
 		</section>
 		<section class="layout-section-partners section-partners container" aria-label="Раздел партнеров">
@@ -262,7 +266,7 @@
 			</a>
 		</div>
 	</footer>
-	<!-- <section id="modal-mail" class="layout-modal-mail modal-mail">
+	<section id="modal-mail" class="layout-modal-mail modal-mail">
 		<form action="" method="post">
 			<legend>Форма обратной связи</legend>
 			<div class="layout-data-mail data-mail">
@@ -279,11 +283,11 @@
 			<button class="btn-action-yellow" type="submit" name="submit" aria-pressed="false">отправить</button>
 		</form>
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
-	</section>  -->
-	<!-- <section id="modal-map" class="modal-map" aria-label="Окно с картой">
+	</section> 
+	<section id="modal-map" class="modal-map" aria-label="Окно с картой">
 		<img width="960" height="559" src="img/map-modal.jpg" alt="Карта с адресом улица Строителей, 15">
 		<button class="exit" type="button" aria-label="Закрыть">X</button>
-	</section>  -->
+	</section> 
 	<script>
 		
 	</script>
