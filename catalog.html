@@ -9,7 +9,7 @@
 <body>
   <header class="main-header container">
     <div class="layout-header-logo">
-      <a href="#">
+      <a href="index.html">
         <img class="logo-img" width="163" height="35" src="img/logo-device.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device">
       </a>
     </div>
@@ -17,7 +17,7 @@
       <div class="layout-navigation-head-top">
         <ul class="navigation-head-top">
           <li>
-            <form class="form-search" action="#" method="get">
+            <form class="form-search" action="/echo" method="get">
               <label class="magnifier" for="search-text"></label>
               <input id="search-text" class="search-text" type="text" name="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту" autocomplete="on">
               <input class="search-submit" type="submit" value="Найти">
@@ -40,7 +40,7 @@
       </div>
       <nav class="layout-navigation-head-bottom">
         <ul class="navigation-head-bottom">
-          <li>
+          <li class="catalog-nav-full">
             <button class="catalog-button" aria-pressed="false">Каталог товаров</button>
             <ul class="navigation-catalog-full navigation-catalog-hidden container" aria-label="Полный каталог товаров">
               <li>
@@ -80,8 +80,8 @@
     </div>
     <div class="layout-catalog-columns catalog-columns container">
       <aside class="layout-filter filter">
-        <form action="#" method="get">
-          <legend class="legend-filter">Фильтр:</legend>
+        <form action="/echo" method="get">
+          <p class="legend-filter">Фильтр:</p>
           <fieldset class="fieldset-price"> 
             <b>Стоимость</b>
              <div class="range-filter">
@@ -172,7 +172,7 @@
           </p>
         </li>      
         <li>
-           <figure class="layout-product-img product-img">
+           <figure class="layout-product-img product-img product-new">
             <img width="360" height="380" src="img/item/item-4.jpg" alt="Изображение: Селфи-палка «Следуй за мной» в форме руки">
             <div class="add-product">
               <button class="btn-action-yellow" type="button">в корзину</button>
@@ -204,9 +204,9 @@
     <ul class="authorization-footer">
       <li>
         <div>
-          <a class="authorization-button" href="/login.html">Войти</a>
-          <a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
-          <a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+          <a class="authorization-button authorization-icon visually-hidden" href="/login.html">Войти</a>
+          <a class="account-button authorization-icon" href="#">Валентин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
+          <a class="authorization-button " href="/login.html">Выйти</a>
         </div>
       </li>
       <li><a class="compare-button" href="#">Сравнить</a></li>
