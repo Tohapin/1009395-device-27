@@ -77,7 +77,7 @@
 					<img class="slider-img" width="384" height="486" src="img/slider/slider-stic.png" alt="Изображение черной селфи палки с прорезиненной ручкой, пряжкой для руки и тремя фиксаторами для устройства.">
 				</div>
 				<div class="layout-slider-description-box slider-description">
-					<h2>Делай селфи, как Бен Стиллер!</h2>
+					<h2>Делай селфи,<br> как Бен Стиллер!</h2>
 					<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 					<a class="button-more-details" href="#">подробнее</a>
 					<ul class="layout-slider-parameters slider-parameters">
@@ -93,7 +93,7 @@
 					<img class="slider-img" width="345" height="486" src="img/slider/slider-watсh.png" alt="Изображение Фитнес-браслета с монохромным ЖК-экраном и резиновым браслетом.">
 				</div>
 				<div class="layout-slider-description-box slider-description">
-					<h2>Худеем правильно!</h2>
+					<h2>Худеем<br> правильно!</h2>
 					<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 					<a class="button-more-details" href="#">подробнее</a>
 					<ul class="layout-slider-parameters slider-parameters">
@@ -129,46 +129,46 @@
 				<li>
 					<a class="popular-element vr" href="#">
 						<span></span>					
-						Виртуальная реальность
+						<p>Виртуальная реальность</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element monopod" href="catalog.html">
 						<span></span>	
-						Моноподы для селфи
+						<p>Моноподы для селфи</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element action-cam" href="#">
 						<span></span>
-						Экшн-камеры
+						<p>Экшн-камеры</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element fitnes" href="#">
 						<span></span>
-						Фитнес-браслеты
+						<p>Фитнес-браслеты</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element watch" href="#">
 						<span></span>
-						Умные часы
+						<p>Умные часы</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element quadrocopter" href="#">
 						<span></span>
-						Квадрокоптеры
+						<p>Квадрокоптеры</p>
 					</a>
 				</li>
 			</ul>
 		</article>
 		<section class="layout-section-service section-service container" aria-label="Раздел услуг">
 			<ul class="layout-slider-control-service slider-control-service">
-				<li><button class="active">Доставка</button></li>
-				<li><button>Гарантия</button></li>
-				<li><button>Кредит</button></li>
+				<li><button id="service-button-1" class="active">Доставка</button></li>
+				<li><button id="service-button-2">Гарантия</button></li>
+				<li><button id="service-button-3">Кредит</button></li>
 			</ul>
 			<div class="layout-slider-service slider-service">
 				<div class="layout-slider-item slider-service-1" id="slider-service-1">
@@ -225,7 +225,7 @@
 				<h2>Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 				<p class="map">
-					<img width="560" height="222" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">	
+					<img width="560" height="222" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">
 				</p>
 				<a class="write-button" href="#modal-mail">НАпишите нам</a>
 			</section>
@@ -238,7 +238,7 @@
 				<li>
 					<div>
 						<a class="authorization-button" href="/login.html">Войти</a>
-						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> <!-- visually-hidden для скрытия элеменотов-->
+						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> 
 						<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
 					</div>
 				</li>
@@ -266,7 +266,7 @@
 			</a>
 		</div>
 	</footer>
-	<section id="modal-mail" name="modal-mail" class="layout-modal-mail modal-mail visually-hidden">
+	<section id="modal-mail" class="layout-modal-mail modal-mail visually-hidden">
 		<form action="https://echo.htmlacademy.ru" method="post">
 			<fieldset>
 				<legend>Форма обратной связи</legend>
@@ -282,15 +282,15 @@
 					</label>
 				</div>
 			</fieldset>
-			<button class="btn-action-yellow" type="submit" aria-pressed="false">отправить</button>
+			<button class="btn-action-yellow" name="submit" type="submit" aria-pressed="false">отправить</button>
 		</form>
-		<button class="modal-close" type="button" aria-label="Закрыть">X</button>
+		<button class="modal-close modal-close-mail" type="button" aria-label="Закрыть">X</button>
 	</section> 
 	<section id="modal-map" class="modal-map visually-hidden" aria-label="Окно с картой">
 		<a href="https://yandex.ru/maps/7/kostroma/?ll=40.884898%2C57.748630&z=15">
 			<img width="960" height="559" src="img/map-modal.jpg" alt="Карта с адресом улица Строителей, 15">
 		</a>
-		<button class="modal-close" type="button" aria-label="Закрыть">X</button>
+		<button class="modal-close modal-close-map" type="button" aria-label="Закрыть">X</button>
 	</section>
 	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
