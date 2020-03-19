@@ -34,6 +34,7 @@ window.addEventListener("keydown", function (evt) {
 		}
 	}
 });
+
 // карта
 var link_map = document.querySelector(".map");
 var popup_map = document.querySelector(".modal-map");
@@ -60,160 +61,32 @@ window.addEventListener("keydown", function (evt) {
 });
 
 // слайдер на главной 
-var
-	slider_button_1 = document.querySelector("#slider-button-1"),
-	slider_button_2 = document.querySelector("#slider-button-2"),
-	slider_button_3 = document.querySelector("#slider-button-3");
-var
-	slider_showcase_1 = document.querySelector("#slider-showcase-1"),
-	slider_showcase_2 = document.querySelector("#slider-showcase-2"),
-	slider_showcase_3 = document.querySelector("#slider-showcase-3");	
+var	slider_showcase_button = document.querySelectorAll(".slider-control-showcase .control-button");
+var	slider_showcase = document.querySelectorAll(".section-showcase .slider");
 
-slider_button_1.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	if(!slider_button_1.classList.contains('active')){
-		slider_button_1.classList.add("active");
-	}
-	if(slider_button_2.classList.contains('active')){
-		slider_button_2.classList.remove("active");
-	}
-	if(slider_button_3.classList.contains('active')){
-		slider_button_3.classList.remove("active");
-	}
-
-	if(slider_showcase_1.classList.contains('visually-hidden')){
-		slider_showcase_1.classList.remove("visually-hidden");
-	}
-	if(!slider_showcase_2.classList.contains('visually-hidden')){
-		slider_showcase_2.classList.add("visually-hidden");
-	}
-	if(!slider_showcase_3.classList.contains('visually-hidden')){
-		slider_showcase_3.classList.add("visually-hidden");
-	}
-});
-
-slider_button_2.addEventListener("click", function (evt) {	
-	evt.preventDefault();
-	if(!slider_button_2.classList.contains('active')){
-		slider_button_2.classList.add("active");
-	}
-	if(slider_button_1.classList.contains('active')){
-		slider_button_1.classList.remove("active");
-	}
-	if(slider_button_3.classList.contains('active')){
-		slider_button_3.classList.remove("active");
-	}
-
-	if(slider_showcase_2.classList.contains('visually-hidden')){
-		slider_showcase_2.classList.remove("visually-hidden");
-	}
-	if(!slider_showcase_1.classList.contains('visually-hidden')){
-		slider_showcase_1.classList.add("visually-hidden");
-	}
-	if(!slider_showcase_3.classList.contains('visually-hidden')){
-		slider_showcase_3.classList.add("visually-hidden");
-	}
-});
-
-slider_button_3.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	if(!slider_button_3.classList.contains('active')){
-		slider_button_3.classList.add("active");
-	}
-	if(slider_button_1.classList.contains('active')){
-		slider_button_1.classList.remove("active");
-	}
-	if(slider_button_2.classList.contains('active')){
-		slider_button_2.classList.remove("active");
-	}
-
-	if(slider_showcase_3.classList.contains('visually-hidden')){
-		slider_showcase_3.classList.remove("visually-hidden");
-	}
-	if(!slider_showcase_1.classList.contains('visually-hidden')){
-		slider_showcase_1.classList.add("visually-hidden");
-	}
-	if(!slider_showcase_2.classList.contains('visually-hidden')){
-		slider_showcase_2.classList.add("visually-hidden");
-	}
-});
+for (let i = 0; i < slider_showcase_button.length; i++) {
+  slider_showcase_button[i].addEventListener("click", function () {
+    for (var k = 0; k < slider_service_button.length; k++) {
+    	slider_showcase_button[k].classList.remove("active");
+ 		slider_showcase[k].classList.add("visually-hidden");
+    }
+    slider_showcase_button[i].classList.add("active");
+    slider_showcase[i].classList.remove("visually-hidden");
+  });
+}
 
 // слайдер сервис
+var	slider_service_button = document.querySelectorAll(".slider-control-service button");
+var	slider_service = document.querySelectorAll(".slider-service .layout-slider-item");
 
-var
-	slider_service_button_1 = document.querySelector("#service-button-1"),
-	slider_service_button_2 = document.querySelector("#service-button-2"),
-	slider_service_button_3 = document.querySelector("#service-button-3");
-var
-	slider_service_1 = document.querySelector("#slider-service-1"),
-	slider_service_2 = document.querySelector("#slider-service-2"),
-	slider_service_3 = document.querySelector("#slider-service-3");	
+for (let i = 0; i < slider_service_button.length; i++) {
+  slider_service_button[i].addEventListener("click", function () {
+    for (var k = 0; k < slider_service_button.length; k++) {
+    	slider_service_button[k].classList.remove("active");
+ 		slider_service[k].classList.add("visually-hidden");
+    }
+    slider_service_button[i].classList.add("active");
+    slider_service[i].classList.remove("visually-hidden");
+  });
+}
 
-slider_service_button_1.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	if(!slider_service_button_1.classList.contains('active')){
-		slider_service_button_1.classList.add("active");
-	}
-	if(slider_service_button_2.classList.contains('active')){
-		slider_service_button_2.classList.remove("active");
-	}
-	if(slider_service_button_3.classList.contains('active')){
-		slider_service_button_3.classList.remove("active");
-	}
-
-	if(slider_service_1.classList.contains('visually-hidden')){
-		slider_service_1.classList.remove("visually-hidden");
-	}
-	if(!slider_service_2.classList.contains('visually-hidden')){
-		slider_service_2.classList.add("visually-hidden");
-	}
-	if(!slider_service_3.classList.contains('visually-hidden')){
-		slider_service_3.classList.add("visually-hidden");
-	}
-});
-
-slider_service_button_2.addEventListener("click", function (evt) {	
-	evt.preventDefault();
-	if(!slider_service_button_2.classList.contains('active')){
-		slider_service_button_2.classList.add("active");
-	}
-	if(slider_service_button_1.classList.contains('active')){
-		slider_service_button_1.classList.remove("active");
-	}
-	if(slider_service_button_3.classList.contains('active')){
-		slider_service_button_3.classList.remove("active");
-	}
-
-	if(slider_service_2.classList.contains('visually-hidden')){
-		slider_service_2.classList.remove("visually-hidden");
-	}
-	if(!slider_service_1.classList.contains('visually-hidden')){
-		slider_service_1.classList.add("visually-hidden");
-	}
-	if(!slider_service_3.classList.contains('visually-hidden')){
-		slider_service_3.classList.add("visually-hidden");
-	}
-});
-
-slider_service_button_3.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	if(!slider_service_button_3.classList.contains('active')){
-		slider_service_button_3.classList.add("active");
-	}
-	if(slider_service_button_1.classList.contains('active')){
-		slider_service_button_1.classList.remove("active");
-	}
-	if(slider_service_button_2.classList.contains('active')){
-		slider_service_button_2.classList.remove("active");
-	}
-
-	if(slider_service_3.classList.contains('visually-hidden')){
-		slider_service_3.classList.remove("visually-hidden");
-	}
-	if(!slider_service_1.classList.contains('visually-hidden')){
-		slider_service_1.classList.add("visually-hidden");
-	}
-	if(!slider_service_2.classList.contains('visually-hidden')){
-		slider_service_2.classList.add("visually-hidden");
-	}
-});

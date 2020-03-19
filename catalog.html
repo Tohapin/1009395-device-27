@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="site-body">
   <header class="main-header container">
     <div class="layout-header-logo">
       <a href="index.html">
@@ -68,7 +68,7 @@
       </nav>
     </div>
   </header>
-  <main class="site-body">
+  <main class="site-main">
 
     <div class="layout-page-title container">
       <h1 class="page-title">Моноподы для селфи</h1>
@@ -101,17 +101,17 @@
           <fieldset class="fieldset-color"> 
             <b>Цвет</b>
             <ul class="list-color">
-              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-black" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-black">Черный</label></li>
+              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-black" type="checkbox" name="checkbox-color" aria-label="" value="" checked><label for="checkbox-black">Черный</label></li>
               <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-white" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-white">Белый</label></li>
-              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-blue" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-blue">Синий</label></li>
-              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-red" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-red">Красный</label></li>
+              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-blue" type="checkbox" name="checkbox-color" aria-label="" value="" checked><label for="checkbox-blue">Синий</label></li>
+              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-red" type="checkbox" name="checkbox-color" aria-label="" value="" checked><label for="checkbox-red">Красный</label></li>
               <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-pink" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-pink">Розовый</label></li>
             </ul> 
           </fieldset> 
           <fieldset class="fieldset-bluetooth"> 
             <b>Bluetooth</b>
             <ul class="list-bluetooth">
-              <li class="list-bluetooth-item"><input class="bluetooth-input-checkbox" id="checkbox-bluetooth-yes" type="radio" name="checkbox-bluetooth" aria-label="" value=""><label for="checkbox-bluetooth-yes">Есть</label></li>
+              <li class="list-bluetooth-item"><input class="bluetooth-input-checkbox" id="checkbox-bluetooth-yes" type="radio" name="checkbox-bluetooth" aria-label="" value="" checked><label for="checkbox-bluetooth-yes">Есть</label></li>
               <li class="list-bluetooth-item"><input class="bluetooth-input-checkbox" id="checkbox-bluetooth-no" type="radio" name="checkbox-bluetooth" aria-label="" value=""><label for="checkbox-bluetooth-no">Нет</label></li>
             </ul>
           </fieldset>  
@@ -120,13 +120,13 @@
     </aside>
     <div class="layout-catalog-item-right">
       <div class="layout-sort-panel sort-panel">
-        <h3>Сортировка</h3>
+        <h3>Сортировка:</h3>
         <ul class="layout-sort-panel-list sort-panel-list">
           <li><a class="active" href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По популярности</a></li>
-          <li><a class="sort-up visually-hidden" href="#">сортировка по возрастанию</a></li>
-          <li><a class="sort-down visually-hidden sort-active" href="#">сортировка по убыванию</a></li>
+          <li><a class="sort-up" href="#">сортировка по возрастанию</a></li>
+          <li><a class="sort-down sort-active" href="#">сортировка по убыванию</a></li>
         </ul>
       </div>
       <section aria-labelledby="site-catalog" class="layout-catalog catalog">
@@ -154,7 +154,7 @@
             </div>
           </figure>
            <p class="product-description">
-            <a href="#">Профессиональная&nbsp;селфи-палка</a>
+            <a href="#">Профессиональная &emsp;&emsp;селфи-палка</a>
             <b>1 500 руб.</b>
           </p>  
         </li>      

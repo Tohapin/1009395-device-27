@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="site-body">
 	<header class="main-header container">
 		<div class="layout-header-logo">
 			<a href="index.html">
@@ -25,7 +25,7 @@
 					</li>
 					<li>
 						<div class="authorization">
-							<a class="authorization-button  authorization-icon" href="/login.html">Войти</a>
+							<a class="authorization-button authorization-icon" href="/login.html">Войти</a>
 							<a class="account-button authorization-icon visually-hidden" href="#">Валетин Петухов</a> 
 							<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
 						</div>
@@ -68,8 +68,8 @@
 			</nav>
 		</div>
 	</header>
-	<main class="site-body" aria-labelledby="site-body">
-		<h1 id="site-body" class="visually-hidden">HTML Academy: Девайс</h1>
+	<main class="site-main" aria-labelledby="site-main">
+		<h1 id="site-main" class="visually-hidden">HTML Academy: Девайс</h1>
 		<section class="section-showcase container" aria-label="Витрина страницы">
 
 			<div class="layout-slider slider slider-showcase-1" id="slider-showcase-1">
@@ -118,9 +118,9 @@
 			</div>
 
 			<ul class="slider-control-showcase">
-				<li><a class="control-button active" href="#slider-showcase-1" id="slider-button-1">1</a></li>
-				<li><a class="control-button" href="#slider-showcase-2" id="slider-button-2">2</a></li>
-				<li><a class="control-button" href="#slider-showcase-3" id="slider-button-3">3</a></li>
+				<li><a class="control-button active">1</a></li>
+				<li><a class="control-button">2</a></li>
+				<li><a class="control-button">3</a></li>
 			</ul> 
 
 		</section>
@@ -166,12 +166,12 @@
 		</article>
 		<section class="layout-section-service section-service container" aria-label="Раздел услуг">
 			<ul class="layout-slider-control-service slider-control-service">
-				<li><button id="service-button-1" class="active">Доставка</button></li>
-				<li><button id="service-button-2">Гарантия</button></li>
-				<li><button id="service-button-3">Кредит</button></li>
+				<li><button class="active">Доставка</button></li>
+				<li><button>Гарантия</button></li>
+				<li><button>Кредит</button></li>
 			</ul>
 			<div class="layout-slider-service slider-service">
-				<div class="layout-slider-item slider-service-1" id="slider-service-1">
+				<div class="layout-slider-item slider-service-1" >
 					<h3>Доставка</h3>
 					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 				</div>
@@ -236,11 +236,9 @@
 			<a href="#"><img class="logo-img" width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
 			<ul class="authorization-footer">
 				<li>
-					<div>
-						<a class="authorization-button" href="/login.html">Войти</a>
-						<a class="account-button visually-hidden" href="#">Валетин Петухов</a> 
+						<a class="authorization-button authorization-icon" href="/login.html">Войти</a>
+						<a class="account-button authorization-icon visually-hidden" href="#">Валетин Петухов</a> 
 						<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
-					</div>
 				</li>
 				<li><a class="compare-button" href="#">Сравнить</a></li>
 				<li><a class="basket-button" href="#">Корзина</a></li>
