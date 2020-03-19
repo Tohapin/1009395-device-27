@@ -7,28 +7,20 @@
 }
 
 @font-face {
-  font-family: 'Gilroy-ExtraBold';
+  font-family: 'Gilroy';
   src: url('fonts/Gilroy-ExtraBold.woff2') format('woff2'),
        url('fonts/Gilroy-ExtraBold.woff') format('woff');
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy-Light';
+  font-family: 'Gilroy';
   src: url('fonts/Gilroy-Light.woff2') format('woff2'),
        url('fonts/Gilroy-Light.woff') format('woff');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
-
-/*@font-face {
-  font-family: '';
-  src: url('.woff2') format('woff2'),
-       url('.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}*/
 
 html,
 body {
@@ -45,18 +37,24 @@ body {
   color: #464646;	
 }
 
-a{
+ /* Временно для сетки */
+	body{
+	 /* background-image: url('../device-catalog.jpg');
+	  background-size: 1440px auto;
+	  background-position-x: 50%;
+	  background-position-y: -20px;
+	  background-repeat: no-repeat;
+	  min-width: 1160px;*/
+	  /*background-attachment: fixed;*/
+	}
+
+.site-body a{
 	text-decoration: none;
 	word-wrap: break-word;
 }
 
-ul{
+.site-body ul{
 	list-style: none;
-	padding-left: 0px;
-}
-
-.visually-hidden{
-	display: none;
 }
 
 /*стили в хедере*/
@@ -72,7 +70,7 @@ ul{
 /*доделать инпут*/
 .search-text{
 	width: 100%;
-	padding-left: 30px;
+	padding-left: 36px;
  	border: none;
  	background: none;
  	font-weight: 300;
@@ -122,7 +120,7 @@ ul{
    	background: url("../img/icon/search.svg") no-repeat;
    	height: 16px;
    	width: 16px;
-   	left: 0;  
+   	left: 3px;  
    	top: 0; 
    	bottom: 0;
    	margin: auto 0; 
@@ -149,7 +147,6 @@ ul{
 	color: rgba(255, 255, 255, 0.3);
 }
 
-
 .authorization-button:hover,
 .authorization-button:focus,
 .account-button:hover,
@@ -167,7 +164,7 @@ ul{
 	content: url("../img/icon/user.svg");
    	height: 13px;
    	width: 12px;
-   	padding-right: 9px;
+   	padding-right: 12px;
 }		
 
 .authorization-icon:hover:before,
@@ -185,7 +182,7 @@ ul{
 }
 
 .navigation-head-top a{
-	color: rgba(0, 0, 0, 0.6);
+	color: rgb(0, 0, 0);
 }
 
 header .compare-button::before{
@@ -277,7 +274,7 @@ header .basket-button:active{
   	padding: 0;
 
 	font-family: "Gilroy", "Arial Black", sans-serif;
-	letter-spacing: 1.2px;
+	letter-spacing: 3.4px;
 	font-size: 18px;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -303,13 +300,17 @@ header .basket-button:active{
    	vertical-align: middle;
 }
 
+.catalog-nav-full:hover .navigation-catalog-full{
+	display: flex;
+}
+
 .navigation-head-bottom a{
 	background-color: transparent;
   	border: none;
   	padding: 0;
 
-	font-family: "Gilroy", sans-serif;
-	letter-spacing: 1.2px;
+	font-family: "Gilroy", "Arial Black", sans-serif;
+	letter-spacing: 3.4px;
 	font-size: 18px;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -342,16 +343,16 @@ header .basket-button:active{
 	opacity: 0.3;
 }	
 
-.site-body{
+.site-main{
 	position: relative;
 	z-index: 10;
 }
 
 .slider-description h2{
-	max-width: 400px;
+	min-height: 110px;
 	margin: 0 0 22px 0;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	font-size: 47px;
   	font-weight: 800;
   	font-stretch: normal;
@@ -380,7 +381,7 @@ header .basket-button:active{
 
 .slider-parameters b{
 	display: block;
-	font-family: "Gilroy-Light", "Arial", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 36px;
   	font-weight: 300;
   	font-stretch: normal;
@@ -405,7 +406,7 @@ header .basket-button:active{
 	padding: 0 41px;
 
 	text-align: center;
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -439,7 +440,7 @@ header .basket-button:active{
 }	
 
 .popular-element{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 18px;
   	font-weight: 800;
   	letter-spacing: 0.18px;
@@ -459,10 +460,16 @@ header .basket-button:active{
 	justify-content: center;
 }
 
+.popular-element p{
+	width: 100px;
+	word-wrap: normal;
+}
+
 .vr span:before{
 	content: url("../img/icon/popular-1.svg");
 	width: 97px;
 	height: 55px;
+	padding-bottom: 5px;
 }
 
 .monopod span:before{
@@ -470,12 +477,15 @@ header .basket-button:active{
 	width: 86px;
 	height: 117px;
 	align-self: flex-end;
+	padding-bottom: 5px;
 }
 
 .action-cam span:before{
 	content: url("../img/icon/popular-3.svg");
 	width: 71px;
 	height: 87px;
+	padding-bottom: 3px;
+	padding-left: 4px;
 }
 
 .fitnes span:before{
@@ -488,12 +498,15 @@ header .basket-button:active{
 	content: url("../img/icon/popular-5.svg");
 	width: 56px;
 	height: 98px;
+	padding-bottom: 3px;
+	padding-left: 4px;
 }
 
 .quadrocopter span:before{
 	content: url("../img/icon/popular-6.svg");
 	width: 132px;
 	height: 86px;
+	padding-top: 18px;
 }
 
 a.popular-element:hover span{
@@ -528,6 +541,7 @@ a.popular-element:active span:before{
 .slider-control-service li{
 	display: flex;
 	height: 40px;
+	margin-bottom: 43px;
 	flex-direction: column;
 	align-content: center;
 }
@@ -538,10 +552,10 @@ a.popular-element:active span:before{
 	position: relative;
 	padding: 0 11px;
 	border: none;
-	background-color: unset;
+	background-color: transparent;
 
 	text-align: center;
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -609,7 +623,7 @@ a.popular-element:active span:before{
 }
 
 .slider-service h3{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
   	font-size: 48px;
   	font-weight: 800;
@@ -625,15 +639,15 @@ a.popular-element:active span:before{
     top: 85px;
 }
 
-#slider-service-1:after{
+.slider-service-1:after{
 	content: url("../img/icon/delivery.svg");
 }
 
-#slider-service-2:after{
+.slider-service-2:after{
 	content: url("../img/icon/warranty.svg");
 }
 
-#slider-service-3:after{
+.slider-service-3:after{
 	content: url("../img/icon/credit.svg");
 }
 
@@ -685,7 +699,7 @@ a.popular-element:active span:before{
 }
 
 .section-about h2{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 47px;
   	font-weight: 800;
   	line-height: 1;
@@ -694,7 +708,7 @@ a.popular-element:active span:before{
 }
 
 .section-contacts h2{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 47px;
   	font-weight: 800;
   	line-height: 1;
@@ -710,16 +724,16 @@ ul.about-list{
 }
 
 .about-list li{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 16px;
   	font-weight: 800;
-  	line-height: 1.02;
+  	letter-spacing: 0.1px;
   	color: #000000;
  	line-height: 30px;
 }
 
 .section-contacts h2{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 47px;
   	font-weight: 800;
   	line-height: 1.02;
@@ -731,7 +745,7 @@ ul.about-list{
 	text-align: center;
 	padding: 0 22px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -767,7 +781,7 @@ ul.about-list{
 	position: relative;
 	text-align: center;
 	padding: 0 38px;
-	font-family: "Gilroy-ExtraBold", "Arial Black",Gilroy-ExtraBold sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -803,8 +817,12 @@ ul.about-list{
 	opacity: 0.7;
   	font-size: 15px;
   	font-weight: 300;
-  	letter-spacing: -0.4px;
+  	letter-spacing: -0.1px;
   	color: rgba(255, 255, 255, 0.7);
+}
+
+.authorization-footer .authorization-button{
+	color: rgba(255, 255, 255, 0.7); 
 }
 
 footer .compare-button:hover:before,
@@ -825,12 +843,12 @@ footer .compare-button:active{
 	color: rgba(0, 0, 0, 0.3);
 }
 
-footer .authorization-button::before{
+footer .authorization-icon::before{
 	display: inline;
    	content: url("../img/icon/user-yellow.svg");
    	height: 10px;
    	width: 10px;
-   	padding-right: 10px;
+   	padding-right: 15px;
 }
 
 footer .compare-button::before{
@@ -866,8 +884,16 @@ footer .basket-button::before{
 	opacity: 0.3;
 }
 
+.rows-contacts .address{
+	letter-spacing: -0.3px;
+}
+
+.rows-contacts .phone{
+	letter-spacing: -0.1px;
+}
+
 footer .delivery-button{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 18px;
   	font-weight: 800;
   	letter-spacing: 3.6px;
@@ -876,7 +902,7 @@ footer .delivery-button{
 }
 
 footer .warranty-button{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 18px;
   	font-weight: 800;
   	letter-spacing: 3.6px;
@@ -885,7 +911,7 @@ footer .warranty-button{
 }
 
 footer .contacts-button{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 18px;
   	font-weight: 800;
   	letter-spacing: 3.6px;
@@ -984,6 +1010,7 @@ footer .contacts-button{
 	background-color: #ffc600;
 }
 
+
 /*дизайн модального окна*/
 
 fieldset{
@@ -1008,7 +1035,7 @@ fieldset{
 .data-mail label{
 	display: block;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 18px;
   	font-weight: 800;
   	color: #000000;	
@@ -1090,7 +1117,7 @@ fieldset{
 	padding: 0 30px;
 	background-color: rgba(0, 0, 0, 0);
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -1124,13 +1151,13 @@ fieldset{
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.exit{
+.modal-close{
 	font-size: 0;
 	border: 0;
 	background-color: inherit;
 }
 
-.exit:before{
+.modal-close:before{
 	content: url("../img/icon/modal-close.svg");
 	position: absolute;
 	width: 55px;
@@ -1140,33 +1167,37 @@ fieldset{
 	opacity: 0.5;
 }
 
-.exit:hover:before{
+.modal-close:hover:before{
 	opacity: 1;
 }
 
-.exit:active{
+.modal-close:active{
 	outline: none;
 }
 
-.exit:focus{
+.modal-close:focus{
 	outline: 0;
 	opacity: 1;
 }
 
-.exit:active:before{
+.modal-close:active:before{
 	opacity: 0.3;
+}
+
+.map{
+	cursor: pointer;
 }
 
 .modal-map{
 	z-index: 11;
 	display: block;
-	position: absolute;
+	position: fixed;
 	width: 960px;
   	height: 559px;
 	box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
-	top: 1850px;
-	left: -480px;
-	margin-left: 50%;
+	top: 25%;
+	left:50%;
+	margin-left: -480px;
 }
 
 .modal-map img{
@@ -1174,7 +1205,7 @@ fieldset{
 	height: 100%;
 }
 
-.section-about::before{
+.section-contacts::before{
 	content: "";
 	display: block;
 	width: 80px;
@@ -1182,11 +1213,19 @@ fieldset{
 	background-color: black;
 }
 
+.section-about::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 7px;
+    background-color: black;
+}
+
 /*разметка модальных окон*/
 .layout-modal-mail{
-	position: absolute;
+	position: fixed;
 	z-index: 11;
-	top: 1055px;
+	top: 25%;
   	left: 50%;
   	margin-left: -480px;
 }
@@ -1205,20 +1244,13 @@ fieldset{
 	margin-bottom: 20px;
 }
 
+.layout-data-mail input:invalid{
+	 background-color: #f6dada;
+}
+
 .modal-textarea-name-label{
 	flex-grow: 1;
 }
-
- /* Временно для сетки */
-	body{
-	  /*background-image: url('../device-index.jpg');*/
-	  background-size: 1440px auto;
-	  background-position-x: 50%;
-	  background-position-y: -20px;
-	  background-repeat: no-repeat;
-	  min-width: 1160px;
-	  /*background-attachment: fixed;*/
-	}
 
 .container {
 	box-sizing: border-box;
@@ -1277,22 +1309,22 @@ fieldset{
 }
 
 .navigation-head-bottom > li:nth-child(1){
-	flex-grow: 35;
+	width: 540px;
 }
 .navigation-head-bottom > li:nth-child(2){
-	flex-grow: 4;
+	width: 160px;
 }
 .navigation-head-bottom > li:nth-child(3){
-	flex-grow: 12;
+	width: 219px;
 }
 .navigation-head-bottom > li:nth-child(4){
-	flex-grow: 0;
+	width: 121px;
 }
 
 .navigation-catalog-full{
 	z-index: 11;
 	position: absolute;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	justify-content: flex-start;
 	flex-basis: 100px;
@@ -1333,25 +1365,28 @@ fieldset{
 .section-showcase{
 	position: relative;
 	margin-bottom: 110px;
+	min-height: 486px;
 }
 
 .layout-slider{
-	padding: 0 60px 0 0;
+	/*padding: 0 60px 0 0;*/
 	display: flex;
 	position: relative;
 	flex-direction: row;
+	justify-content: flex-end;
 }
 
 .layout-slider-img-box{
 	display: flex;
-	width: 480px;
+	width: 560px;
 	justify-content: center;
 	margin-right: 40px;
-	flex-grow: 8;
+/*	flex-grow: 8;*/
 }
 
 .layout-slider-description-box{
-	flex-grow: 1;
+	/*flex-grow: 1;*/
+	width: 560px;
 }
 
 .layout-slider-parameters{
@@ -1363,15 +1398,11 @@ fieldset{
 }
 
 .layout-slider-parameters li{
-	width: 130px; 
+	width: 160px; 
 }
 
 .layout-slider-parameters li:not(:last-child){
 	margin-right: 10px; 
-}
-
-.layout-slider-parameters li:first-child{
-	margin-right: 30px; 
 }
 
 .slider-control-showcase{
@@ -1390,6 +1421,8 @@ fieldset{
 	height: 12px;
 	background: url("../img/icon/slider-button-empty.svg") no-repeat 50% 50%;
 	background-size: 100%;
+	border: none;
+	padding: 0;
 
 	font-size: 0;
 }
@@ -1399,46 +1432,50 @@ fieldset{
 	background-size: 100%;
 }
 
-#slider-showcase-1:before{
+.slider-showcase-1:before{
 	z-index: -1;
 	content: "01";
 	position: absolute;
 	right: 50px;
 	top: -10px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 179px;
   	font-weight: 800;
 	color: #ffffff;
 	line-height: 1;
 }
 
-#slider-showcase-2:before{
+.slider-showcase-2:before{
 	z-index: -1;
 	content: "02";
 	position: absolute;
 	right: 50px;
 	top: -10px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 179px;
   	font-weight: 800;
 	color: #ffffff;
 	line-height: 1;
 }
 
-#slider-showcase-3:before{
+.slider-showcase-3:before{
 	z-index: -1;
 	content: "03";
 	position: absolute;
 	right: 50px;
 	top: -10px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 179px;
   	font-weight: 800;
 	color: #ffffff;
 	line-height: 1;
+}
+
+.slider-showcase-3 img{
+	margin-top: 60px;
 }
 
 .layout-popular{
@@ -1491,7 +1528,7 @@ fieldset{
 }
 
 .layout-section-partners{
-	margin-bottom: 85px;
+	margin-bottom: 90px;
 }
 
 .layout-section-partners-items{
@@ -1516,7 +1553,8 @@ fieldset{
 }
 
 .layout-section-about h2{
-	margin: 45px 0;
+	margin-top: 47px;
+	margin-bottom: 43px;
 }
 
 .layout-section-about p{
@@ -1533,7 +1571,7 @@ fieldset{
 }
 
 .layout-section-contacts h2{
-	margin-top: 53px;
+	margin-top: 47px;
 	margin-bottom: 43px;
 }
 
@@ -1544,26 +1582,53 @@ fieldset{
 .layout-footer{
 	min-width: 1160px;
 	background-color: #464646;
-	padding: 65px 0;
+	padding-top: 70px;
+	padding-bottom: 65px;
 }
 
 .rows-menu{
 	display: flex;
+	height: 35px;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .authorization-footer{
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-end;
+	width: 480px;
+	height: 100%;
+    align-items: flex-start;
 }
 
 .authorization-footer li{
-	margin-left: 44px;
+	display: flex;
+	align-items: flex-start;
+	height: 100%; 
+	margin-right: 41px;
+}
+
+.authorization-footer li:last-child{
+	margin-right: 0;
+}
+
+.authorization-footer a{
+	line-height: 1;
+}
+
+.authorization-footer a:hover{
+	opacity: 1;
+	color: #ffffff;
+}
+
+.authorization-footer a:active{
+	opacity: 0.3;
 }
 
 .layout-rows-menu{
-	margin-bottom: 22px;
+	margin-bottom: 24px;
 }
 
 .layout-rows-contacts{
@@ -1594,7 +1659,7 @@ fieldset{
 }
 
 .layout-link{
-	margin-left: auto; 
+	margin-left: 510px; 
 	display: flex;
 	width: 140px;
 	padding-left: 22px;
@@ -1611,7 +1676,7 @@ fieldset{
 
 /*страница кактлога*/
 .page-title{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 47px;
   	font-weight: 800;
   	line-height: 1;
@@ -1658,11 +1723,12 @@ fieldset{
 	display: block;
 	position: relative;
 	width: 100%;
-	padding: 22px 0px;
+	padding-top: 22px;
+	padding-bottom: 23px;
 	margin-bottom: 67px;
 	background-color: #d9d9d9;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 17px;
   	font-weight: 800;
   	line-height: 1.5;
@@ -1687,7 +1753,7 @@ fieldset{
 	display: block;
 	padding-bottom: 20px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 17px;
   	font-weight: 800;
   	line-height: 1.5;
@@ -1698,6 +1764,7 @@ fieldset{
 .filter{
 	position: relative;
 	width: 265px;
+	margin-left: 60px;
 }
 
 .filter:before{
@@ -1737,6 +1804,24 @@ fieldset{
 	opacity: 0.7;
 }
 
+.product-new:after{
+	content: "NEW";
+	display: flex;
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	justify-content: center;
+	align-items: center;
+	right: 28px;
+	top: 28px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 50%;
+
+	font-family: "Gilroy", "Arial Black", sans-serif;
+	font-weight: 800;
+  	color: rgba(0, 0, 0, 0.2);
+}
+
 .add-product{
 	display: none;
 	flex-direction: column;
@@ -1758,13 +1843,13 @@ fieldset{
 	z-index: 2;
 	display: block;
 	position: relative;
-	padding: 0 11px;
+	padding: 0 20px;
 	border: none;
-	background-color: unset;
+	background-color: transparent;
 	margin-bottom: 25px;
 
 	text-align: center;
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -1804,7 +1889,7 @@ fieldset{
 	position: relative;
 	padding: 0 11px;
 	border: none;
-	background-color: unset;
+	background-color: transparent;
 
 	text-align: center;
 	font-family: "OpenSans", "Arial", sans-serif;
@@ -1831,11 +1916,11 @@ fieldset{
 	position: relative;
 	padding: 0 40px;
 	border: none;
-	background-color: unset;
+	background-color: transparent;
 	margin-bottom: 25px;
 
 	text-align: center;
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	color: #000000;
 	text-transform: uppercase;
   	font-size: 18px;
@@ -1878,16 +1963,16 @@ fieldset{
 .product-description a{
 	max-width: 260px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	font-size: 18px;
   	font-weight: 800;
   	line-height: 1.33;
-  	letter-spacing: 0.18px;
+  	letter-spacing: 0.2px;
   	color: rgb(0, 0, 0);
 }
 
 .product-description b{
-	font-family: "Gilroy-Light", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	font-size: 16px;
 	font-weight: 300;
   	line-height: 1.5;
@@ -1913,9 +1998,9 @@ fieldset{
 
 .sort-panel h3{
 	padding: 23px 0px;
-	margin-right: 57px;
+	margin-right: 50px;
 
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 17px;
   	font-weight: 800;
   	line-height: 1.5;
@@ -1950,38 +2035,48 @@ fieldset{
 	color: rgba(0, 0, 0, 1);
 }
 
-.sort-up {
-	display: inline;
-	content: url("../img/icon/icon-up-dir.svg");
+.sort-panel-list .sort-up {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url("../img/icon/icon-up-dir.svg") no-repeat 50% 50%;
 	margin-right: 20px;
+	
+	vertical-align: middle;
 	opacity: 0.2;
+	font-size: 0;
 }
 
-.sort-up:hover,
-.sort-up:focus{
+.sort-panel-list .sort-up:hover,
+.sort-panel-list .sort-up:focus{
 	opacity: 0.6;
 }
 
-.sort-up:active{
+.sort-panel-list .sort-up:active{
 	opacity: 1;
 }
 
-.sort-down {
-	display: inline;
-	content: url("../img/icon/icon-down-dir.svg");
+.sort-panel-list .sort-down {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: url("../img/icon/icon-down-dir.svg") no-repeat 50% 50%;
+
+	vertical-align: middle;
 	opacity: 0.2;
+	font-size: 0;
 }
 
-.sort-down:hover,
-.sort-down:focus{
+.sort-panel-list .sort-down:hover,
+.sort-panel-list .sort-down:focus{
 	opacity: 0.6;
 }
 
-.sort-down:active{
+.sort-panel-list .sort-down:active{
 	opacity: 1;
 }
 
-.sort-active{
+.sort-panel-list .sort-active{
 	opacity: 1;
 }
 
@@ -2017,7 +2112,7 @@ fieldset{
 }
 
 .catalog-pagination a{
-	font-family: "Gilroy-ExtraBold", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
   	font-size: 16px;
   	font-weight: 800;
   	line-height: 1.5;
@@ -2082,7 +2177,7 @@ fieldset{
 	left: -18px;
 	text-align: center;
 
-	font-family: "Gilroy-Light", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	font-size: 14px;
   	font-weight: 300;
   	color: rgba(0, 0, 0, 0.2);
@@ -2095,7 +2190,7 @@ fieldset{
 	left: -29px;
 	text-align: center;
 
-	font-family: "Gilroy-Light", "Arial Black", sans-serif;
+	font-family: "Gilroy", "Arial Black", sans-serif;
 	font-size: 14px;
   	font-weight: 300;
   	color: rgba(0, 0, 0, 0.2);
@@ -2244,8 +2339,7 @@ fieldset{
 
 .layout-catalog-columns{
 	display: flex;
-	justify-content: space-between;
-	padding-left: 60px;
+	justify-content: flex-start;
 }
 
 .layout-catalog-item-right{
@@ -2254,6 +2348,7 @@ fieldset{
 	justify-content: space-between;
 	width: 760px;
 	margin-bottom: 75px;
+	margin-left: auto;
 }
 
 .layout-catalog{
@@ -2295,11 +2390,13 @@ fieldset{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 .layout-catalog-goods li{
+	width: 360px;
 	margin-top: 33px;
-	margin-bottom: 33px;
+	margin-bottom: 12px;
 }
 
 .layout-product-img{
@@ -2322,7 +2419,7 @@ fieldset{
 .layout-catalog-pagination{
 	position: relative;
 	display: flex;
-	justify-content: center;
+	/*justify-content: center;*/
 }
 
 .layout-catalog-pagination li:first-child {
@@ -2334,4 +2431,63 @@ fieldset{
 	min-width: 100px;
 	margin-left: auto;
 	text-align: right;
+}
+
+.visually-hidden{
+	display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
+.modal-show {
+  	display: block;
+
+  	animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.slider-show {
+  	display: flex;
 }
