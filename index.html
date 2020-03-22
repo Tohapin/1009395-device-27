@@ -9,7 +9,7 @@
 <body class="site-body">
 	<header class="main-header container">
 		<div class="layout-header-logo">
-			<a href="index.html">
+			<a>
 				<img class="logo-img" width="163" height="35" src="img/logo-device.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device">
 			</a>
 		</div>
@@ -27,7 +27,7 @@
 						<div class="authorization">
 							<a class="authorization-button authorization-icon" href="/login.html">Войти</a>
 							<a class="account-button authorization-icon visually-hidden" href="#">Валетин Петухов</a> 
-							<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+							<a class="authorization-button authorization-exit-button visually-hidden" href="/login.html">Выйти</a>
 						</div>
 					</li>
 					<li>
@@ -41,12 +41,12 @@
 			<nav class="layout-navigation-head-bottom">
 				<ul class="navigation-head-bottom">
 					<li class="catalog-nav-full">
-						<button class="catalog-button" aria-pressed="false">Каталог товаров</button>
-						<ul class="navigation-catalog-full navigation-catalog-hidden container" aria-label="Полный каталог товаров">
+						<a class="catalog-button" href="popular-element">Каталог товаров</a>
+						<ul class="navigation-catalog-full navigation-catalog-hidden container" aria-label="Полный каталог товаров" tabindex="0">
 							<li>
 								<ul class="navigation-catalog-item">
-									<li><a href="catalog.html">Виртуальная реальность</a></li>
-									<li><a href="catalog.html">Моноподы для селфи</a></li>
+									<li><a href="catalog.html" tabindex="0">Виртуальная реальность</a></li>
+									<li><a href="catalog.html" tabindex="0">Моноподы для селфи</a></li>
 									<li><a href="catalog.html">Экшн-камеры</a></li>
 								</ul>
 							</li>
@@ -107,7 +107,7 @@
 					<img class="slider-img" width="526" height="334" src="img/slider/slider-quadrocopter.png" alt="Изображение квадрокоптера с черными пропеллерами, белым корпусом и снизу камера со стабилизацией.">
 				</div>
 				<div class="layout-slider-description-box slider-description">
-					<h2>Порхает как бабочка, жалит как пчела!</h2>
+					<h2>Порхает&nbsp;как&nbsp;бабочка, жалит как пчела!</h2>
 					<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 					<a class="button-more-details" href="#">подробнее</a>
 					<ul class="layout-slider-parameters slider-parameters">
@@ -128,37 +128,31 @@
 			<ul class="layout-popular-item">
 				<li>
 					<a class="popular-element vr" href="#">
-						<span></span>					
 						<p>Виртуальная реальность</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element monopod" href="catalog.html">
-						<span></span>	
-						<p>Моноподы для селфи</p>
+						<p>Моноподы &emsp;&emsp;для селфи</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element action-cam" href="#">
-						<span></span>
 						<p>Экшн-камеры</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element fitnes" href="#">
-						<span></span>
 						<p>Фитнес-браслеты</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element watch" href="#">
-						<span></span>
 						<p>Умные часы</p>
 					</a>
 				</li>
 				<li>
 					<a class="popular-element quadrocopter" href="#">
-						<span></span>
 						<p>Квадрокоптеры</p>
 					</a>
 				</li>
@@ -188,22 +182,22 @@
 		<section class="layout-section-partners section-partners container" aria-label="Раздел партнеров">
 			<ul class="layout-section-partners-items section-partners-items">
 				<li>
-					<a href="#">
+					<a class="dji" href="#">
 						<img width="260" height="100" src="img/partners/dji_color.png" alt="Лого бренда DJI">
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a class="sp" href="#">
 						<img width="260" height="100" src="img/partners/sp_color.png" alt="Лого бренда SP Gadgets">
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a class="gopro" href="#">
 						<img width="260" height="100" src="img/partners/gopro_color.png" alt="Лого бренда GoPro">
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a class="vive" href="#">
 						<img width="260" height="100" src="img/partners/vive_color.png" alt="Лого бренда Vive">
 					</a>
 				</li>
@@ -223,22 +217,24 @@
 			</section>
 			<section class="layout-section-contacts section-contacts">
 				<h2>Контакты</h2>
-				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+				<p class="description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 				<p class="map">
-					<img width="560" height="222" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">
+					<a href="map.html">
+						<img width="560" height="222" src="img/map.jpg" alt="Карта с адресом улица Строителей, 15">
+					</a>
 				</p>
-				<a class="write-button" href="#modal-mail">НАпишите нам</a>
+				<a class="write-button" href="writeus.html">Напишите нам</a>
 			</section>
 		</div>
 	</main>
 	<footer class="layout-footer" aria-label="Подвал сайта, основная информация и контакты">
 		<div class="layout-rows-menu rows-menu container">
-			<a href="#"><img class="logo-img" width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
+			<a><img class="logo-img" width="163" height="35" src="img/logo-device-yellow.svg" alt="Логотип интернет-магазина 'Девайс' с надписью Device"></a>
 			<ul class="authorization-footer">
 				<li>
-						<a class="authorization-button authorization-icon" href="/login.html">Войти</a>
-						<a class="account-button authorization-icon visually-hidden" href="#">Валетин Петухов</a> 
-						<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
+					<a class="authorization-button authorization-icon" href="/login.html">Войти</a>
+					<a class="account-button authorization-icon visually-hidden" href="#">Валетин Петухов</a> 
+					<a class="authorization-button visually-hidden" href="/login.html">Выйти</a>
 				</li>
 				<li><a class="compare-button" href="#">Сравнить</a></li>
 				<li><a class="basket-button" href="#">Корзина</a></li>
@@ -251,7 +247,7 @@
 				<li><a class="warranty-button" href="#">Гарантия</a></li>
 				<li><a class="contacts-button" href="#">Контакты</a></li>
 			</ul> 
-			<p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p> 
+			<a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
 		</div>
 		<div class="layout-rows-links rows-links container">
 			<ul class="layout-link link">
@@ -285,9 +281,7 @@
 		<button class="modal-close modal-close-mail" type="button" aria-label="Закрыть">X</button>
 	</section> 
 	<section id="modal-map" class="modal-map visually-hidden" aria-label="Окно с картой">
-		<a href="https://yandex.ru/maps/7/kostroma/?ll=40.884898%2C57.748630&z=15">
-			<img width="960" height="559" src="img/map-modal.jpg" alt="Карта с адресом улица Строителей, 15">
-		</a>
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1c5711cf53ef6c6e11fb39d8e0a12a5c51e167a054c7bedfbc74d5368ffee542&amp;width=960&amp;height=559&amp;lang=ru_RU&amp;scroll=true"></script>
 		<button class="modal-close modal-close-map" type="button" aria-label="Закрыть">X</button>
 	</section>
 	<script type="text/javascript" src="js/scripts.js"></script>

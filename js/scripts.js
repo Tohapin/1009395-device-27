@@ -14,16 +14,19 @@ link_mail.addEventListener("click", function (evt) {
 });
 
 popup_mail.addEventListener("submit", function (evt) {
-    if (!massage.value || !name.value || !email.value) {
-      	evt.preventDefault();
-      	popup_mail.classList.add("modal-error");
-    }
+	if (!massage.value || !name.value || !email.value) {
+		evt.preventDefault();
+		popup_mail.classList.remove("modal-error");
+		popup_mail.offsetWidth = popup_mail.offsetWidth;
+		popup_mail.classList.add("modal-error");
+	}
 });
 
 close_mail.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	popup_mail.classList.remove("modal-show");
 	popup_mail.classList.remove("modal-error");
+	popup_mail.classList.add("modal-close-animation");
+	setTimeout(popup_mail.classList.remove("modal-show"), 1000);
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -65,16 +68,16 @@ var	slider_showcase_button = document.querySelectorAll(".slider-control-showcase
 var	slider_showcase = document.querySelectorAll(".section-showcase .slider");
 
 for (var i = 0; i < slider_showcase_button.length; i++) {
-  slider_showcase_button[i].addEventListener("click", (function (index) {
-    return function() {
-      for (var k = 0; k < slider_showcase_button.length; k++) {
-      slider_showcase_button[k].classList.remove("active");
-      slider_showcase[k].classList.add("visually-hidden");
-    }
-    slider_showcase_button[index].classList.add("active");
-    slider_showcase[index].classList.remove("visually-hidden");
-    }
-  })(i));
+	slider_showcase_button[i].addEventListener("click", (function (index) {
+		return function() {
+			for (var k = 0; k < slider_showcase_button.length; k++) {
+				slider_showcase_button[k].classList.remove("active");
+				slider_showcase[k].classList.add("visually-hidden");
+			}
+			slider_showcase_button[index].classList.add("active");
+			slider_showcase[index].classList.remove("visually-hidden");
+		}
+	})(i));
 }
 
 // слайдер сервис
@@ -82,15 +85,15 @@ var	slider_service_button = document.querySelectorAll(".slider-control-service b
 var	slider_service = document.querySelectorAll(".slider-service .layout-slider-item");
 
 for (var i = 0; i < slider_service_button.length; i++) {
-  slider_service_button[i].addEventListener("click", (function (index) {
-    return function() {
-      for (var k = 0; k < slider_service_button.length; k++) {
-      slider_service_button[k].classList.remove("active");
-      slider_service[k].classList.add("visually-hidden");
-    }
-    slider_service_button[index].classList.add("active");
-    slider_service[index].classList.remove("visually-hidden");
-    }
-  })(i));
+	slider_service_button[i].addEventListener("click", (function (index) {
+		return function() {
+			for (var k = 0; k < slider_service_button.length; k++) {
+				slider_service_button[k].classList.remove("active");
+				slider_service[k].classList.add("visually-hidden");
+			}
+			slider_service_button[index].classList.add("active");
+			slider_service[index].classList.remove("visually-hidden");
+		}
+	})(i));
 }
 
