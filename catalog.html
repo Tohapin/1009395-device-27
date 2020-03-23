@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Монопод для селфи</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 <body class="site-body">
   <header class="main-header container">
@@ -89,8 +89,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min"><span class="min-price">от 0</span></div>
-                <div class="toggle toggle-max"><span class="max-price">до 5000</span></div>
+                <div class="toggle toggle-min" tabindex="0"><span class="min-price">от 0</span></div>
+                <div class="toggle toggle-max" tabindex="0"><span class="max-price">до 5000</span></div>
               </div>
               <div class="visually-hidden">
                 <label class="min-price">от <input name="min-price" type="number" value="0"></label>
@@ -102,7 +102,7 @@
             <b>Цвет</b>
             <ul class="list-color">
               <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-black" type="checkbox" name="checkbox-color" aria-label="" value="" checked><label for="checkbox-black">Черный</label></li>
-              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-white" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-white">Белый</label></li>
+              <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-white" type="checkbox" name="checkbox-color" aria-label="" value="" ><label for="checkbox-white">Белый</label></li>
               <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-blue" type="checkbox" name="checkbox-color" aria-label="" value="" checked><label for="checkbox-blue">Синий</label></li>
               <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-red" type="checkbox" name="checkbox-color" aria-label="" value="" checked><label for="checkbox-red">Красный</label></li>
               <li class="list-color-item"><input class="color-input-checkbox" id="checkbox-pink" type="checkbox" name="checkbox-color" aria-label="" value=""><label for="checkbox-pink">Розовый</label></li>
@@ -133,11 +133,11 @@
           <h2 id="site-catalog" class="visually-hidden">Каталог моноподов для селфи</h2>
           <ul class="layout-catalog-goods catalog-goods">
             <li>
-              <figure class="layout-product-img product-img">
+              <figure class="layout-product-img product-img" tabindex="0">
                 <img width="360" height="380" src="img/item/item-1.jpg" alt="Изображение: Любительская селфи-палка, простая телескопическая конструкция с прорезиненной рукояткой и держателем для смартфона">
                 <div class="add-product">
-                  <button class="btn-action-yellow" type="button">в корзину</button>
-                  <button class="btn-action-grey" type="button">Добавить к сравнению</button>
+                  <button class="btn-action-yellow" type="button" tabindex="0">в корзину</button>
+                  <button class="btn-action-grey" type="button" tabindex="0">Добавить к сравнению</button>
                 </div>
               </figure>
               <p class="product-description">
@@ -146,11 +146,11 @@
               </p>
             </li>      
             <li>
-              <figure class="layout-product-img product-img">
+              <figure class="layout-product-img product-img" tabindex="0">
                 <img width="360" height="380" src="img/item/item-2.jpg" alt="Изображение: Профессиональная селфи-палка, телескопическая конструкция с прорезиненной рукояткой и держателем для смартфона, кнопкой спуска">
                 <div class="add-product">
-                  <button class="btn-action-yellow" type="button">в корзину</button>
-                  <button class="btn-action-grey" type="button">Добавить к сравнению</button>
+                  <button class="btn-action-yellow" type="button" tabindex="0">в корзину</button>
+                  <button class="btn-action-grey" type="button" tabindex="0">Добавить к сравнению</button>
                 </div>
               </figure>
               <p class="product-description">
@@ -159,11 +159,11 @@
               </p>  
             </li>      
             <li>
-              <figure class="layout-product-img product-img">
+              <figure class="layout-product-img product-img" tabindex="0">
                 <img width="360" height="380" src="img/item/item-3.jpg" alt="Изображение: Непотопляемая селфи-палка, с прорезиненной рукояткой и держателем для смартфона, желтый корпус">
                 <div class="add-product">
-                  <button class="btn-action-yellow" type="button">в корзину</button>
-                  <button class="btn-action-grey" type="button">Добавить к сравнению</button>
+                  <button class="btn-action-yellow" type="button" tabindex="0">в корзину</button>
+                  <button class="btn-action-grey" type="button" tabindex="0">Добавить к сравнению</button>
                 </div>
               </figure>
               <p class="product-description">
@@ -172,11 +172,11 @@
               </p>
             </li>      
             <li>
-              <figure class="layout-product-img product-img product-new">
+              <figure class="layout-product-img product-img product-new" tabindex="0">
                 <img width="360" height="380" src="img/item/item-4.jpg" alt="Изображение: Селфи-палка «Следуй за мной» в форме руки">
                 <div class="add-product">
-                  <button class="btn-action-yellow" type="button">в корзину</button>
-                  <button class="btn-action-grey" type="button">Добавить к сравнению</button>
+                  <button class="btn-action-yellow" type="button" tabindex="0">в корзину</button>
+                  <button class="btn-action-grey" type="button" tabindex="0">Добавить к сравнению</button>
                 </div>
               </figure>
               <p class="product-description">
@@ -226,7 +226,7 @@
         <li><a class="instagram" href="#">Instagram</a></li> <!-- img/social/instagram.svg -->
         <li><a class="twitter" href="#">Twitter</a></li> <!-- img/social/twitter.svg -->
       </ul>
-      <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на профессиональный онлайн‑курс HTML и CSS">
         <img class="logo-htmlacademy" width="27" height="35" src="img/logo-html.svg" alt="logo-htmlacademy">
       </a>
     </div>

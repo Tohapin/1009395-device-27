@@ -26,14 +26,19 @@ close_mail.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup_mail.classList.remove("modal-error");
 	popup_mail.classList.add("modal-close-animation");
-	setTimeout(popup_mail.classList.remove("modal-show"), 1000);
+	setTimeout(()=>{
+		popup_mail.classList.remove("modal-show");
+		popup_mail.classList.remove("modal-close-animation");
+	}, 400);
 });
 
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
 		evt.preventDefault();
 		if (popup_mail.classList.contains("modal-show")) {
-			popup_mail.classList.remove("modal-show");
+			popup_mail.classList.remove("modal-error");
+			popup_mail.classList.add("modal-close-animation");
+			setTimeout(()=>{popup_mail.classList.remove("modal-show");popup_mail.classList.remove("modal-close-animation")}, 400);
 		}
 	}
 });
@@ -50,15 +55,18 @@ link_map.addEventListener("click", function (evt) {
 
 close_map.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	popup_map.classList.remove("modal-show");
+	popup_map.classList.remove("modal-error");
+	popup_map.classList.add("modal-close-animation");
+	setTimeout(()=>{popup_map.classList.remove("modal-show");popup_map.classList.remove("modal-close-animation")}, 400);
 });
 
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
 		evt.preventDefault();
 		if (popup_map.classList.contains("modal-show")) {
-			popup_map.classList.remove("modal-show");
 			popup_map.classList.remove("modal-error");
+			popup_map.classList.add("modal-close-animation");
+			setTimeout(()=>{popup_map.classList.remove("modal-show");popup_map.classList.remove("modal-close-animation")}, 400);
 		}
 	}
 });

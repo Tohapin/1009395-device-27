@@ -305,7 +305,8 @@ header .basket-button:active{
 	vertical-align: middle;
 }
 
-.catalog-nav-full:hover .navigation-catalog-full{
+.catalog-nav-full:hover .navigation-catalog-full,
+.catalog-nav-full:focus-within .navigation-catalog-full{
 	display: flex;
 }
 
@@ -1887,7 +1888,8 @@ footer .contacts-button{
 	margin-bottom: 35px; 
 }
 
-.product-img img::hover{
+.product-img:hover img,
+.product-img:focus img{
 	opacity: 0.7;
 }
 
@@ -1910,7 +1912,8 @@ footer .contacts-button{
 }
 
 .add-product{
-	display: none;
+	visibility: hidden;
+	display: flex;
 	flex-direction: column;
 	position: absolute;
 	top: 0;
@@ -1922,8 +1925,10 @@ footer .contacts-button{
 	padding-top: 40px;
 }
 
-.product-img:hover .add-product{
-	display: flex;
+.product-img:hover .add-product,
+.product-img:focus .add-product,
+.product-img:focus-within .add-product{
+	visibility: visible;
 }
 
 .btn-action-yellow{
@@ -2304,7 +2309,16 @@ footer .contacts-button{
 }
 
 .list-color-item input{
-	display: none;
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .list-color-item{
@@ -2354,7 +2368,16 @@ footer .contacts-button{
 }
 
 .list-bluetooth-item input{
-	display: none;
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .list-bluetooth-item{
@@ -2586,7 +2609,7 @@ footer .contacts-button{
 	}
 
 	100% {
-		transform: translateY(-2000px);
+		transform: translateY(2000px);
 	}
 }
 
@@ -2597,7 +2620,7 @@ footer .contacts-button{
 }
 
 .modal-close-animation {
-	animation: bounce_reverse 1.6s;
+	animation: bounce_reverse 0.6s;
 
 }
 
